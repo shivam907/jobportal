@@ -7,4 +7,32 @@
   border-radius: 3rem;
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5rem;
+}
+.bar{
+  background-color: #fff;
+  border-radius: 0.5rem;
+  /* padding: 2rem; */
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr 1fr;
+}
+.input{
+  display: flex;
+  padding: 2rem;
+  align-items: center;
+  border-right: 1px solid #00000090;
+}
+.bar button{
+  align-self: center;
+  margin: 0 2rem;
+}
+.input:nth-child(3){
+  border: none !important;
+  /* background-color: aqua; */
+}
+.input input{
+  border: none;
 }
