@@ -1,0 +1,30 @@
+.nav{
+    width: 100vw;
+    padding: 2rem 0;
+}
+.nav nav{
+    width: 120rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: antiquewhite; */
+    align-items: center;
+}
+.navelements{
+    display: flex;
+    gap: 3rem;
+}
+.nav1{
+    display: flex;
+    gap: 2rem;
+}
+.nav2{
+    display: flex;
+    gap: 1rem;
+}
+.nav h1{
+    font-size: 2rem;
+}
+.navel{
+    font-size: 1.4rem;
+}
