@@ -17,6 +17,7 @@
 .nav1{
     display: flex;
     gap: 2rem;
+    align-items: center;
 }
 .nav2{
     display: flex;

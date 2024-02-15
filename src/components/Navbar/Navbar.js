@@ -1,5 +1,8 @@
 import React from "react";
 import classes from "./Navbar.module.css";
+import Button1 from "../Buttons/Button1";
+import Button2
+ from "../Buttons/Button2";
 
 const Navbar = () => {
   return (
@@ -15,8 +18,8 @@ const Navbar = () => {
             <div className={classes.navel}>Carrers</div>
           </div>
           <div className={classes.nav2}>
-            <div className={classes.btn1}>Login</div>
-            <div className={classes.btn2}>Register</div>
+          <Button2>Login</Button2>
+          <Button1>Register</Button1>
           </div>
         </div>
       </nav>

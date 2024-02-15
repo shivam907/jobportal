@@ -1,0 +1,10 @@
+.hero{
+  width: 120rem;
+  margin: 0 auto;
+  height: 30rem;
+  background-image: url("/hero.png");
+  margin-top: 2rem;
+  border-radius: 3rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
