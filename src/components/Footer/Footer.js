@@ -42,9 +42,12 @@ const Footer = () => {
           <h1>Contact Info</h1>
           <p>contact@jobportal.com</p>
           <div className={classes.links}>
-            <div className={classes.link}></div>
-            <div className={classes.link}></div>
-            <div className={classes.link}></div>
+            <div className={classes.link}>
+                <img src="./insta.svg" alt="" />
+            </div>
+            <div className={classes.link}>
+                <img src="./whatsapp.png" alt="" />
+            </div>
           </div>
         </div>
       </footer>
