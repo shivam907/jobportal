@@ -1,0 +1,13 @@
+.select{
+    background-color: transparent !important;
+    font-size: 1.6rem;
+}
+.inputs{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.inputs label{
+    font-size: 1.6rem !important;
+}

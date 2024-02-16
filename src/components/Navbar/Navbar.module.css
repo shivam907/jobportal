@@ -1,4 +1,5 @@
 .nav{
+    position: fixed;
     width: 100vw;
     padding: 2rem 0;
 }
@@ -12,6 +13,7 @@
 }
 .navelements{
     display: flex;
+    color: #ffffffb0;
     gap: 3rem;
 }
 .nav1{
@@ -25,6 +27,7 @@
 }
 .nav h1{
     font-size: 2rem;
+    color: #fff;
 }
 .navel{
     font-size: 1.4rem;

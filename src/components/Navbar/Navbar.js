@@ -18,8 +18,8 @@ const Navbar = () => {
             <div className={classes.navel}>Carrers</div>
           </div>
           <div className={classes.nav2}>
-          <Button2>Login</Button2>
-          <Button1>Register</Button1>
+          {/* <Button2>Login</Button2> */}
+          <Button2>Register</Button2>
           </div>
         </div>
       </nav>

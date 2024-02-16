@@ -1,0 +1,23 @@
+import React from "react";
+import classes from "./Input.module.css";
+
+const Input = (props) => {
+  return (
+    <div className={classes.inputs}>
+      <div className={classes.label}>
+        <label htmlFor="">{props.label}</label>
+        {props.required && <span>Required</span>}
+        {props.opt && <span>(optional)</span>}
+      </div>
+      <input
+        className={classes.input}
+        type={props.type}
+        onChange={props.onSubmit}
+        placeholder={props.placeholder}
+        disabled={props.disabled}
+      />
+    </div>
+  );
+};
+
+export default Input;
