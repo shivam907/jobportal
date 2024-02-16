@@ -4,8 +4,9 @@
   /* height: 30rem; */
   background-image: url("/hero.png");
   margin-top: 2rem;
-  border-radius: 3rem;
-  background-size: cover;
+  border-radius: 1rem;
+  background-size: 100%;
+  background-position: center;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
@@ -52,10 +53,16 @@
   align-self: flex-start;
   align-items: center;
   margin-top: 2rem;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .text label{
   font-size: 1.6rem;
   color: #fff;
+}
+.body{
+  width: 120rem;
+  margin: 5rem auto;
+  display: flex;
+  justify-content: space-between;
 }

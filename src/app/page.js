@@ -1,5 +1,6 @@
 import classes from "./page.module.css";
 import Button1 from "@/components/Buttons/Button1";
+import JobBox from "@/components/Job/JobBox";
 export default function Home() {
   return (
     <main className={classes.main}>
@@ -28,6 +29,35 @@ export default function Home() {
           <input type="checkbox" name="" id="" />
           <label htmlFor="">Freshers Only</label>
         </div>
+      </div>
+      <div className={classes.body}>
+                <JobBox
+                jobName={"SDE 1"}
+                date={"123455"}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                date={"123455"}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                date={"123455"}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
       </div>
     </main>
   );
