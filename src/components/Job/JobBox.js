@@ -74,8 +74,8 @@ const JobBox = (props) => {
                 <WorkOutlineIcon className={classes.icon} />
               </div>
               <p>{props.experience}</p> {/*1-5 years*/}
+            {/* <div className={classes.line}></div> */}
             </div>
-            <div className={classes.line}></div>
           </>
         )}
         {props.salary && (
@@ -86,7 +86,7 @@ const JobBox = (props) => {
               </div>
               <p>{props.salary}</p>
             </div>
-            <div className={classes.line}></div>
+            {/* <div className={classes.line}></div> */}
           </>
         )}
         {props.location && (
@@ -97,8 +97,6 @@ const JobBox = (props) => {
             <p>{props.location}</p>
           </div>
         )}
-      </div>
-      <div className={classes.columnn}>
         {props.degree && (
           <>
             <div className={classes.clbox}>
@@ -108,7 +106,7 @@ const JobBox = (props) => {
               <p>{props.degree}</p>
               {/* B.Tech CSE */}
             </div>
-            <div className={classes.line}></div>
+            {/* <div className={classes.line}></div> */}
           </>
         )}
         {props.role && (

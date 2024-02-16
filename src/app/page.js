@@ -33,7 +33,10 @@ export default function Home() {
       <div className={classes.body}>
                 <JobBox
                 jobName={"SDE 1"}
-                date={"123455"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
                 companyName="Netflix"
                 location={"Chandigarh"}
                 role={"Fresher"}
@@ -42,7 +45,10 @@ export default function Home() {
               />
                 <JobBox
                 jobName={"SDE 1"}
-                date={"123455"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
                 companyName="Netflix"
                 location={"Chandigarh"}
                 role={"Fresher"}
@@ -51,7 +57,10 @@ export default function Home() {
               />
                 <JobBox
                 jobName={"SDE 1"}
-                date={"123455"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
                 companyName="Netflix"
                 location={"Chandigarh"}
                 role={"Fresher"}

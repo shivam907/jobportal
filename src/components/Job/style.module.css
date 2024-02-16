@@ -26,6 +26,7 @@
 }
 .heading{
     display: flex;
+    gap: 1rem;
     flex-direction: column;
     text-transform: capitalize;
 }
@@ -40,7 +41,8 @@
     color: #474d6a;
 }
 .column{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
 }
 .clbox{
