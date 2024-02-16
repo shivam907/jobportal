@@ -63,6 +63,7 @@
 .body{
   width: 120rem;
   margin: 5rem auto;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
 }

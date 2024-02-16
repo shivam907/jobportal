@@ -67,6 +67,1050 @@ export default function Home() {
                 description={`lorem50`}
                 link={'https://shivam.com'}
               />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
+                <JobBox
+                jobName={"SDE 1"}
+                experience={"1 Year"}
+                salary={"10 LPA"}
+                degree={"B.Tech"}
+                date={1707735622261}
+                companyName="Netflix"
+                location={"Chandigarh"}
+                role={"Fresher"}
+                description={`lorem50`}
+                link={'https://shivam.com'}
+              />
       </div>
     </main>
   );
