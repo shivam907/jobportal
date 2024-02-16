@@ -1,8 +1,12 @@
 import classes from "./page.module.css";
 import Button1 from "@/components/Buttons/Button1";
 import JobBox from "@/components/Job/JobBox";
+import Navbar from "@/components/Navbar/Navbar";
+import Footer from "@/components/Footer/Footer";
 export default function Home() {
   return (
+    <>
+    <Navbar/>
     <main className={classes.main}>
       <div className={classes.hero}>
         <div className={classes.bar}>
@@ -1113,5 +1117,7 @@ export default function Home() {
               />
       </div>
     </main>
+    <Footer/>
+    </>
   );
 }
