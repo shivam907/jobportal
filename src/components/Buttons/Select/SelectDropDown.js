@@ -17,7 +17,7 @@ const SelectDropDown = (props) => {
             //   outline:"none",
             // borderColor: state.isActive ? 'grey' : 'red',
             // borderSize: '20px',
-            fontSize: "16px",
+            fontSize: "14px",
             padding: "5px 10px",
             width: "100%",
             color: "red",
@@ -25,7 +25,7 @@ const SelectDropDown = (props) => {
           }),
           option: (styles, { data }) => ({
             ...styles,
-            fontSize: "16px",
+            fontSize: "14px",
             //   border:"none",
             //   outline:"none"
             //   backgroundColor: "transparent"

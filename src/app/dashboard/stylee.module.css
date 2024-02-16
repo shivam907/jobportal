@@ -1,5 +1,5 @@
 .navBar {
-  width: 280px;
+  width: 25rem;
   height: 100vh;
   padding: 16px 5px;
   display: flex;
@@ -33,7 +33,7 @@
 
 .paraNav {
   color: #ccc;
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 .logo {
