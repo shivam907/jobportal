@@ -6,18 +6,27 @@ export default function Home() {
       <div className={classes.hero}>
         <div className={classes.bar}>
           <div className={classes.input}>
-          <img src="./search.svg" alt="" />
-            <input type="text" name="" id="" placeholder="Search" />
+            <img src="./search.svg" alt="" />
+            <input
+              type="text"
+              name=""
+              id=""
+              placeholder="Search for Companies, Keyword "
+            />
           </div>
           <div className={classes.input}>
-          <img src="./search.svg" alt="" />
-            <input type="text" name="" id="" placeholder="Search" />
+            <img src="./location.png" alt="" />
+            <input type="text" name="" id="" placeholder="Location" />
           </div>
           <div className={classes.input}>
-          <img src="./search.svg" alt="" />
-            <input type="text" name="" id="" placeholder="Search" />
+            <img src="./work.svg" alt="" />
+            <input type="text" name="" id="" placeholder="Experience" />
           </div>
           <Button1>Search</Button1>
+        </div>
+        <div className={classes.text}>
+          <input type="checkbox" name="" id="" />
+          <label htmlFor="">Freshers Only</label>
         </div>
       </div>
     </main>

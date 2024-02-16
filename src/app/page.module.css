@@ -1,7 +1,7 @@
 .hero{
   width: 120rem;
   margin: 0 auto;
-  height: 30rem;
+  /* height: 30rem; */
   background-image: url("/hero.png");
   margin-top: 2rem;
   border-radius: 3rem;
@@ -9,20 +9,22 @@
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
-  padding: 0 5rem;
+  padding: 5rem;
 }
 .bar{
   background-color: #fff;
   border-radius: 0.5rem;
   /* padding: 2rem; */
   display: grid;
-  grid-template-columns: 3fr 2fr 2fr 1fr;
+  grid-template-columns: 4fr 2fr 2fr 2fr;
 }
 .input{
   display: flex;
   padding: 2rem;
   align-items: center;
+  gap: 1rem;
   border-right: 1px solid #00000090;
 }
 .bar button{
@@ -35,4 +37,25 @@
 }
 .input input{
   border: none;
+  width: 100%;
+  outline: none;
+  font-size: 1.4rem;
+}
+.input img{
+  width: 2.3rem;
+}
+.bar button{
+  padding: 1rem 3rem;
+}
+.text{
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+
+.text label{
+  font-size: 1.6rem;
+  color: #fff;
 }
