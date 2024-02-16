@@ -11,6 +11,7 @@
     border-radius: 0.5rem;
     transition: all 0.1s ease-in-out;
     position: relative;
+    border-bottom: 2px solid #5964DF;
 }
 .edits{
     position: absolute;
@@ -100,7 +101,8 @@
 }
 .apply p{
     font-size: 1.4rem;
-    color: #202020;
+    color: #5964DF;
+    /* color: #202020; */
 }
 .apply .icon{
     font-size: 1.8rem !important;
@@ -173,7 +175,8 @@
 		height: 100%;
 		border-width: 1.5px 1.5px 0 0;
 		border-style: solid;
-		border-color: #333;
+		/* border-color: #333; */
+		border-color: #5964DF;
 		transition: .2s ease;
 		display: block;
 		transform-origin: 100% 0;
@@ -189,7 +192,8 @@
 		height: 100%;
 		border-width: 0 1.5px 0 0;
 		border-style: solid;
-		border-color: #333;
+		border-color: #5964DF;
+		/* border-color: #333; */
 		transform-origin: 100% 0;
 		transition:.2s ease;
 	}

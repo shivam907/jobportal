@@ -25,10 +25,10 @@ export default function Home() {
           </div>
           <Button1>Search</Button1>
         </div>
-        <div className={classes.text}>
+        {/* <div className={classes.text}>
           <input type="checkbox" name="" id="" />
           <label htmlFor="">Freshers Only</label>
-        </div>
+        </div> */}
       </div>
       <div className={classes.body}>
                 <JobBox
