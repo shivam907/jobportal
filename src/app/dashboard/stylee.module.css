@@ -72,6 +72,10 @@
   gap: 25px;
   padding: 10px 15px;
 }
+.menuFlex a{
+  display: flex;
+  gap: 2.5rem;
+}
 .menuFlex:hover{
     background-color: #b3b3ff20;
     border-radius: 5px;

@@ -5,6 +5,7 @@ import CardMembershipIcon from "@mui/icons-material/CardMembership";
 import PowerSettingsNewIcon from "@mui/icons-material/PowerSettingsNew";
 import ChatIcon from "@mui/icons-material/Chat";
 import classes from "./stylee.module.css";
+import Link from "next/link";
 import img from "./logo.png";
 const layout = ({children}) => {
   const [menu, setMenu] = React.useState(0)
@@ -29,15 +30,19 @@ const layout = ({children}) => {
           </a>
           <div className={classes.menuBox}>
             <div className={classes.menuIn}>
+              <Link href="/dashboard">
               <div onClick={()=>menuHandler(0)} className={`${classes.menuFlex} ${menu===0?classes.activ:''}`}>
                 <DashboardIcon className={classes.iconSize} />
                 <p className={classes.paraNav}>Dashboard</p>
               </div>
+              </Link>
 
+              <Link href="/dashboard/jobs">
               <div onClick={()=>menuHandler(1)} className={`${classes.menuFlex} ${menu===1?classes.activ:''}`}>
                 <CardMembershipIcon className={classes.iconSize} />
                 <p className={classes.paraNav}>All Jobs</p>
               </div>
+              </Link>
               <div onClick={()=>menuHandler(2)} className={`${classes.menuFlex} ${menu===2?classes.activ:''}`}>
                 <ChatIcon className={classes.iconSize} />
                 <p className={classes.paraNav}>Messages</p>
