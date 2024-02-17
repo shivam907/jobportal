@@ -25,6 +25,7 @@ const Dashboard = () => {
   const [job, setJob] = React.useState();
   const [message, setMessage] = React.useState();
   React.useEffect(() => {
+
     setToast(false);
     const jobs = async () => {
       const a = await fetch("http://localhost:4000/api/jobs");

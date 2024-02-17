@@ -36,7 +36,6 @@ const layout = ({children}) => {
                 <p className={classes.paraNav}>Dashboard</p>
               </div>
               </Link>
-
               <Link href="/dashboard/jobs">
               <div onClick={()=>menuHandler(1)} className={`${classes.menuFlex} ${menu===1?classes.activ:''}`}>
                 <CardMembershipIcon className={classes.iconSize} />
