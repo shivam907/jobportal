@@ -5,7 +5,7 @@ export async function POST(req) {
   console.log(data);
   if (data.user == "admin" && data.pass == "pass") {
   const encryptedSessionData = { loggedIn: true }
-  cookies().set('session', encryptedSessionData, {
+  cookies().set('session', JSON.stringify(encryptedSessionData), {
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
     maxAge: 60 * 60 * 24 * 7, // One week
