@@ -2,7 +2,9 @@
 import React from "react";
 import logo from "./logo.png";
 import classes from "./style.module.css";
+import { useRouter } from 'next/navigation'
 const Login = () => {
+  const router=useRouter()
   const [userName, setUserName] = React.useState();
   const [password, setPassword] = React.useState();
   const usernameHandler = (e) => {
@@ -23,19 +25,13 @@ const Login = () => {
     });
     const b = await a.json();
     if (b.loggedIn) {
-      window.location.href = "/dashboard";
+      router.push("/admin/dashboard")
+    }
+    else{
+      router.push("/")
     }
   };
-  // React.useEffect(() => {
-  //   const f = async () => {
-  //     const a = await fetch("http://localhost:4000/api/isLogin");
-  //     const b = await a.json();
-  //     if (!b.loggedIn) {
-  //       window.location.href = "/";
-  //     }
-  //   };
-  //   f();
-  // }, []);
+
   return (
     <div className={classes.body}>
       <img src={logo} alt="" className={classes.logo} />
