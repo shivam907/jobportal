@@ -7,7 +7,7 @@ import ChatIcon from "@mui/icons-material/Chat";
 import classes from "./stylee.module.css";
 import Link from "next/link";
 import img from "./logo.png";
-import { cookies } from "next/headers";
+// import { cookies } from "next/headers";
 const layout = ({ children }) => {
   const [menu, setMenu] = React.useState(0);
   const menuHandler = (e) => {
@@ -15,13 +15,13 @@ const layout = ({ children }) => {
     // props.current(e)
   };
   const logout = async () => {
-    const encryptedSessionData = { loggedIn: true };
-    cookies().set("session", JSON.stringify(encryptedSessionData), {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      maxAge: 60 * 60 * 24 * 7, // One week
-      path: "/",
-    });
+    // const encryptedSessionData = { loggedIn: true };
+    // cookies().set("session", JSON.stringify(encryptedSessionData), {
+    //   httpOnly: true,
+    //   secure: process.env.NODE_ENV === "production",
+    //   maxAge: 60 * 60 * 24 * 7, // One week
+    //   path: "/",
+    // });
   };
   return (
     <div className={classes.nav}>
