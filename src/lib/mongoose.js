@@ -7,9 +7,7 @@ export const connectToDB = async () => {
 
   try {
     await mongoose.connect("mongodb+srv://shivam:1234@user.zgoszrf.mongodb.net/?retryWrites=true&w=majority");
-
     isConnected = true;
-
     console.log('MongoDB Connected');
   } catch (error) {
     console.log(error)
