@@ -40,6 +40,6 @@ const JobSchema = new mongoose.Schema({
 //   something.date(Date.now());
 //   next();
 // });
-const Job = mongoose.model("Job", JobSchema);
+const Job = mongoose.models.Job ||  mongoose.model("Job", JobSchema);
 
 module.exports = Job;

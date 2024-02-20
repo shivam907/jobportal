@@ -4,10 +4,11 @@ import classes from "./style.module.css";
 import SelectDropDown from "@/components/Buttons/Select/SelectDropDown";
 import Input from "@/components/Inputs/Input";
 import TextArea from "@/components/Input/TextArea";
-import Toast from "@/components/Message/Toast";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Dashboard = () => {
-  const [toast, setToast] = React.useState(false);
+  const [tooast, setToast] = React.useState(false);
   const [toastMsg, setToastMsg] = React.useState("");
   const [role, setRole] = React.useState();
   const [company, setCompany] = React.useState();
@@ -22,7 +23,7 @@ const Dashboard = () => {
     setToast(false);
   }, []);
   const roleHandler = (e) => {
-    setToast(false);
+    setToast(false);    
     setRole(e.target.value);
   };
   const companyHandler = (e) => {
@@ -60,8 +61,14 @@ const Dashboard = () => {
 
 
   const submitHandler = async (e) => {
-    setToast(false);
     e.preventDefault();
+    setToast(false);
+    if(!role || !company|| !experience || !salary || role?.length<1 || company?.length<1 || experience?.length<1 || salary?.length<1 || location?.length<1){
+      console.log("bc")
+          toast.error("Please Fill the Form Correctly",{
+      className: classes.toast
+    });
+    }else{
     const res = await fetch("/admin/dashboard/api", {
       method: "POST",
       credentials: "include",
@@ -79,8 +86,11 @@ const Dashboard = () => {
       }),
     });
     await res.json();
-    setToast(true);
-    setToastMsg("Job Successfully Posted");
+    setToast(true);    
+    toast.success("Successfully Added To Cart",{
+      className: classes.toast
+    });
+    }
   };
   return (
     <>
@@ -178,7 +188,7 @@ const Dashboard = () => {
             </button>
           </form>
         </div>
-      {toast && <Toast type={false} msg={toastMsg} />}
+      <ToastContainer/>
     </>
   );
 };

@@ -103,3 +103,7 @@
     flex-direction: column;
     gap: 2rem;
 }
+.toast{
+  font-size: 3.5rem;
+  /* background: #d87d4a; */
+}
