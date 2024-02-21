@@ -42,13 +42,16 @@
     color: #474d6a;
 }
 .column{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-flow: row wrap;
+    /* gap: 1rem; */
     align-items: center;
 }
 .clbox{
     display: flex;
     align-items: center;
+    margin-right: 1rem;
+    /* background-color: #00000010; */
     gap: 1rem;
 }
 .icon, .clbox p{
