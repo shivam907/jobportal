@@ -64,7 +64,15 @@ export default function Home() {
           <label htmlFor="">Freshers Only</label>
         </div> */}
       </div>
-      <div className={classes.body}>{job}</div>
+      <section className={classes.manual}>
+
+      <h1 className={classes.latest}>
+        Latest Jobs
+      </h1>
+      <div className={classes.body}>
+      {job}
+      </div>
+      </section>
     </main>
     <Footer/>
     </>

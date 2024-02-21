@@ -67,9 +67,20 @@
 }
 .body{
   width: 120rem;
-  margin: 5rem auto;
-  margin-top: 10rem;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 3rem;
+}
+.manual{
+  width: 120rem;
+  margin: 5rem auto;
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.latest{
+  font-size: 2rem;
 }
