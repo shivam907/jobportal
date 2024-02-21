@@ -33,7 +33,7 @@ const layout = ({ children }) => {
           </a>
           <div className={classes.menuBox}>
             <div className={classes.menuIn}>
-              <Link href="/dashboard">
+              <Link href="/admin/dashboard">
                 <div
                   onClick={() => menuHandler(0)}
                   className={`${classes.menuFlex} ${
@@ -44,7 +44,7 @@ const layout = ({ children }) => {
                   <p className={classes.paraNav}>Dashboard</p>
                 </div>
               </Link>
-              <Link href="/dashboard/jobs">
+              <Link href="/admin/dashboard/jobs">
                 <div
                   onClick={() => menuHandler(1)}
                   className={`${classes.menuFlex} ${

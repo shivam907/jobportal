@@ -12,12 +12,10 @@ const Dashboard = () => {
   React.useEffect(() => {
     setToast(false);
     const jobs = async () => {
-      // const a = await fetch("http://localhost:4000/api/jobs");
-      // const b = await a.json();
-
-      const b=[1,2,3,4,5,6,7];
+      const a = await fetch("/admin/dashboard/jobs/api");
+      const b = await a.json();
       let arr = [];
-      b.forEach((i) => {
+      b.jobs.forEach((i) => {
         arr.push(
           <JobBox
             key={Math.random(1) * 1000}
@@ -42,11 +40,10 @@ const Dashboard = () => {
   },[])
   return (
     <>
-
-        <div className={classes.jobc}>
-          <h1 className={classes.jh}>All Jobs</h1>
-          <div className={classes.jobs}>{job}</div>
-        </div>
+      <div className={classes.jobc}>
+        <h1 className={classes.jh}>All Jobs</h1>
+        <div className={classes.jobs}>{job}</div>
+      </div>
       {toast && <Toast type={false} msg={toastMsg} />}
     </>
   );

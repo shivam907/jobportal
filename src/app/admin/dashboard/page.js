@@ -4,13 +4,11 @@ import classes from "./style.module.css";
 import SelectDropDown from "@/components/Buttons/Select/SelectDropDown";
 import Input from "@/components/Inputs/Input";
 import TextArea from "@/components/Input/TextArea";
-import Toast from "@/components/Message/Toast";
-import JobBox from "@/components/Job/JobBox";
-import Message from "./Message/Message";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Dashboard = () => {
-  const [toast, setToast] = React.useState(false);
-  const [menu, setMenu] = React.useState(0);
+  const [tooast, setToast] = React.useState(false);
   const [toastMsg, setToastMsg] = React.useState("");
   const [role, setRole] = React.useState();
   const [company, setCompany] = React.useState();
@@ -21,65 +19,11 @@ const Dashboard = () => {
   const [type, setType] = React.useState();
   const [link, setLink] = React.useState();
   const [description, setDescription] = React.useState();
-
-  const [job, setJob] = React.useState();
-  const [message, setMessage] = React.useState();
   React.useEffect(() => {
-
     setToast(false);
-    const jobs = async () => {
-      const a = await fetch("http://localhost:4000/api/jobs");
-      const b = await a.json();
-      let arr = [];
-      b.forEach((i) => {
-        arr.push(
-          <JobBox
-            key={Math.random(1) * 1000}
-            edit={true}
-            id={i._id}
-            date={i.createdAt}
-            jobName={i.role}
-            companyName={i.companyName}
-            experience={i.experience}
-            salary={i.package}
-            degree={i.degree}
-            location={i.location}
-            role={i.type}
-            description={i.description?.slice(0, 100)}
-            link={i.link}
-          />
-        );
-      });
-      setJob(arr);
-    };
-    jobs();
-    const msg = async () => {
-      const a = await fetch("http://localhost:4000/api/message", {
-        method: "GET",
-        credentials: "include",
-        headers: { "Content-Type": "application/json" },
-      });
-      const b = await a.json();
-      let arr = [];
-      b.forEach((i) => {
-        arr.push(
-          <Message
-            key={Math.random(1) * 1000}
-            firstName={i.firstName}
-            lastName={i.lastName}
-            email={i.email}
-            subject={i.subject}
-            message={i.message}
-            date={i.createdAt}
-          />
-        );
-      });
-      setMessage(arr);
-    };
-    msg();
   }, []);
   const roleHandler = (e) => {
-    setToast(false);
+    setToast(false);    
     setRole(e.target.value);
   };
   const companyHandler = (e) => {
@@ -114,14 +58,18 @@ const Dashboard = () => {
     setToast(false);
     setDescription(e.target.value);
   };
-  const menuHandler = (e) => {
-    setMenu(e);
-  };
+
 
   const submitHandler = async (e) => {
-    setToast(false);
     e.preventDefault();
-    const res = await fetch("http://localhost:4000/api/post", {
+    setToast(false);
+    if(!role || !company|| !experience || !salary || role?.length<1 || company?.length<1 || experience?.length<1 || salary?.length<1 || location?.length<1){
+      console.log("bc")
+          toast.error("Please Fill the Form Correctly",{
+      className: classes.toast
+    });
+    }else{
+    const res = await fetch("/admin/dashboard/api", {
       method: "POST",
       credentials: "include",
       headers: { "Content-Type": "application/json" },
@@ -138,12 +86,14 @@ const Dashboard = () => {
       }),
     });
     await res.json();
-    setToast(true);
-    setToastMsg("Job Successfully Posted");
+    setToast(true);    
+    toast.success("Successfully Added To Cart",{
+      className: classes.toast
+    });
+    }
   };
   return (
     <>
-      {menu === 0 ? (
         <div className={classes.body}>
           <h1>Post Job</h1>
           <form className={classes.form} action="">
@@ -238,18 +188,7 @@ const Dashboard = () => {
             </button>
           </form>
         </div>
-      ) : menu === 1 ? (
-        <div className={classes.jobc}>
-          <h1 className={classes.jh}>All Jobs</h1>
-          <div className={classes.jobs}>{job}</div>
-        </div>
-      ) : (
-        <div className={classes.jobc}>
-          <h1 className={classes.jh}>All Messages</h1>
-          <div className={classes.msgc}>{message}</div>
-        </div>
-      )}
-      {toast && <Toast type={false} msg={toastMsg} />}
+      <ToastContainer/>
     </>
   );
 };
