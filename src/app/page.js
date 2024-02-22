@@ -65,7 +65,9 @@ export default function Home() {
         </div> */}
       </div>
       <section className={classes.manual}>
-
+        {/* <div className={classes.specific}>
+          <h1>See Company Specific Job Posting</h1>
+        </div> */}
       <h1 className={classes.latest}>
         Latest Jobs
       </h1>

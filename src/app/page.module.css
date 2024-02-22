@@ -84,3 +84,11 @@
 .latest{
   font-size: 2rem;
 }
+
+.specific{
+  width: 120rem;
+  margin: 5rem auto;
+  background-color: #f7f7fe;
+  padding: 5rem 3rem;
+  /* background-color: #87cefa; */
+}
