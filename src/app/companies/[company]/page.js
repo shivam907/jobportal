@@ -9,6 +9,7 @@ const page = (props) => {
         console.log(data.data[props.params.company])
         const a = await fetch(data.data[props.params.company]);
         const b = await a.json();
+        console.log(b)
         let arr = [];
         b.forEach((i) => {
             console.log(i)

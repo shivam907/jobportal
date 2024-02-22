@@ -1,7 +1,7 @@
 {
   "data": {
     "cred": "https://api.lever.co/v0/postings/cred?mode=json&department=frontend%20engineering&department=backend%20engineering&department=data%20science&department=security%20%26%20enterprise%20it",
-    "netflix": "https://api.lever.co/v0/postings/netflix?mode=json",
+    "netflix": "http://api.lever.co/v0/postings/netflix?mode=json&location=Mumbai%2C%20India",
     "zeta": "https://api.lever.co/v0/postings/zeta?mode=json",
     "jar": "https://api.lever.co/v0/postings/jar-app?group=team&mode=json&team=Avengers...oops%20Engineers",
     "juno": "https://api.lever.co/v0/postings/Juno?group=team&mode=json&department=Technology",
@@ -17,13 +17,11 @@
     "dnb": "https://api.lever.co/v0/postings/dnb?group=team&mode=json",
     "ritual": "https://api.lever.co/v0/postings/ritual?mode=json",
     "goto": "https://api.lever.co/v0/postings/GoToGroup?group=team&mode=json&location=Bengaluru&location=Gurugram&location=Hyderabad&location=Noida",
-    "payu": "https://api.lever.co/v0/postings/payu?mode=json",
     "aircall": "https://api.lever.co/v0/postings/aircall?mode=json&location=India",
     "doola": "https://api.lever.co/v0/postings/doola?mode=json&location=India&team=Engineering",
     "nielson": "https://api.lever.co/v0/postings/nielsen?mode=json&location=Bangalore%2C%20India&department=Technology",
     "pesto": "https://api.lever.co/v0/postings/PestoTech?mode=json&team=Marketing&team=Engineering",
     "paytm": "https://api.lever.co/v0/postings/paytm?mode=json",
-    "coupa": "https://api.lever.co/v0/postings/coupa?mode=json&department=Development",
-    "zepto": "https://careers.zohocorp.com/recruit/v2/public/Job_Openings?pagename=Careers&source=CareerSite"
+    "coupa": "https://api.lever.co/v0/postings/coupa?mode=json&department=Development"
   }
 }

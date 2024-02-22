@@ -32,12 +32,12 @@ const JobBox = (props) => {
     months[parseInt(d.getMonth() + 1) - 1] +
     " " +
     d.getFullYear();
-    if(newDate.getFullYear()-d.getFullYear()>1) return null;
-    if(newDate.getFullYear()!=d.getFullYear()){
-    console.log(months[parseInt(newDate.getMonth()+1)-1]+"  "+months[parseInt(d.getMonth()+1)-1])
-    console.log(months.indexOf(months[parseInt(d.getMonth()+1)])-months.indexOf(months[parseInt(newDate.getMonth()+1)]))
-    if(months.indexOf(months[parseInt(d.getMonth()+1)])-months.indexOf(months[parseInt(newDate.getMonth()+1)])>=6) return null;
-  }
+    // if(newDate.getFullYear()-d.getFullYear()>1) return null;
+    // if(newDate.getFullYear()!=d.getFullYear()){
+    // console.log(months[parseInt(newDate.getMonth()+1)-1]+"  "+months[parseInt(d.getMonth()+1)-1])
+    // console.log(months.indexOf(months[parseInt(d.getMonth()+1)])-months.indexOf(months[parseInt(newDate.getMonth()+1)]))
+    // if(months.indexOf(months[parseInt(d.getMonth()+1)])-months.indexOf(months[parseInt(newDate.getMonth()+1)])>=6) return null;
+  // }
   const deleteJob = async () => {
     const a = await fetch("http://localhost:4000/api/delete", {
       method: "POST",
