@@ -7,6 +7,20 @@ const page = (props) => {
     React.useEffect(()=>{
         const fun = async()=>{
         console.log(data.data[props.params.company])
+        console.log("hm")
+        if(data.data[props.params.company].includes("naukri.com")){
+            const a = await fetch('/companies/api', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ url: data.data[props.params.company] }),
+            })
+            const b = await a.json();
+            console.log("hmmm")
+            console.log(b)
+        }
+        else{
         const a = await fetch(data.data[props.params.company]);
         const b = await a.json();
         console.log(b)
@@ -44,7 +58,7 @@ const page = (props) => {
             );
         }
         });
-        setJob(arr)
+        setJob(arr)}
         }
         fun()
     },[])

@@ -22,6 +22,7 @@
     "nielson": "https://api.lever.co/v0/postings/nielsen?mode=json&location=Bangalore%2C%20India&department=Technology",
     "pesto": "https://api.lever.co/v0/postings/PestoTech?mode=json&team=Marketing&team=Engineering",
     "paytm": "https://api.lever.co/v0/postings/paytm?mode=json",
-    "coupa": "https://api.lever.co/v0/postings/coupa?mode=json&department=Development"
+    "coupa": "https://api.lever.co/v0/postings/coupa?mode=json&department=Development",
+    "amazon": "https://www.naukri.com/amazon-overview-398058?tab=jobs&functionAreaIdGid=5&functionAreaIdGid=8&functionAreaIdGid=3&searchId=17022440542154303_17&src=orgCompanyListing"
   }
 }
