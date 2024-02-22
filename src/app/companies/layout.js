@@ -1,12 +1,48 @@
 'use client';
 import classes from "./page.module.css";
 import Button1 from "@/components/Buttons/Button1";
-import JobBox from "@/components/Job/JobBox";
+import data from "@/data/company.json";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import React from "react";
 const layout = ({children}) => {
+  // console.log(Object.keys(data.data))
+  const [sideBar, setSideBar] = React.useState();
+  React.useEffect(() => {
+    const keys = Object.keys(data.data).sort();
+    const groupedData = keys.reduce((acc, curr) => {
+      const firstChar = curr[0].toLowerCase();
+      if (!acc[firstChar]) {
+        acc[firstChar] = [curr];
+      } else {
+        acc[firstChar].push(curr);
+      }
+      return acc;
+    }, {});
+    console.log(groupedData);
+    let arr = [];
+    Object.keys(groupedData).forEach((i) => {
+      let temp = [];
+      groupedData[i].forEach((j) => {
+        temp.push(
+          <div className={classes.assbox}>
+            <p>{j}</p>
+            <KeyboardArrowRightIcon />
+          </div>
+        );
+      });
+      arr.push(
+        <div className={classes.asbox}>
+          <div className={classes.ashead}>
+            <h1>{i}</h1>
+          </div>
+          <div className={classes.asbody}>{temp}</div>
+        </div>
+      );
+    });
+    setSideBar(arr);
+  }, []);
   return (
     <>
       <Navbar />
@@ -40,89 +76,7 @@ const layout = ({children}) => {
         <section className={classes.manual}>
           {/* <h1 className={classes.latest}>Latest Jobs</h1> */}
           <div className={classes.jobbody}>
-            <aside className={classes.aside}>
-                <div className={classes.asbox}>
-                    <div className={classes.ashead}>
-                        <h1>A</h1>
-                    </div>
-                    <div className={classes.asbody}>
-                        <div className={`${classes.assbox} ${classes.asactive}`}>
-                            <p>Amazon</p>
-                            <KeyboardArrowRightIcon/>
-                        </div>
-                        <div className={classes.assbox}>
-                            <p>Amazon</p>
-                            <KeyboardArrowRightIcon/>
-                        </div>
-                        <div className={classes.assbox}>
-                            <p>Amazon</p>
-                            <KeyboardArrowRightIcon/>
-                        </div>
-                        <div className={classes.assbox}>
-                            <p>Amazon</p>
-                            <KeyboardArrowRightIcon/>
-                        </div>
-                        <div className={classes.assbox}>
-                            <p>Amazon</p>
-                            <KeyboardArrowRightIcon/>
-                        </div>
-                    </div>
-                </div>
-                <div className={classes.asbox}>
-                    <div className={classes.ashead}>
-                        <h1>A</h1>
-                    </div>
-                    <div className={classes.asbody}>
-                        <div className={`${classes.assbox} ${classes.asactive}`}>
-                            <p>Amazon</p>
-                            <KeyboardArrowRightIcon/>
-                        </div>
-                        <div className={classes.assbox}>
-                            <p>Amazon</p>
-                            <KeyboardArrowRightIcon/>
-                        </div>
-                        <div className={classes.assbox}>
-                            <p>Amazon</p>
-                            <KeyboardArrowRightIcon/>
-                        </div>
-                        <div className={classes.assbox}>
-                            <p>Amazon</p>
-                            <KeyboardArrowRightIcon/>
-                        </div>
-                        <div className={classes.assbox}>
-                            <p>Amazon</p>
-                            <KeyboardArrowRightIcon/>
-                        </div>
-                    </div>
-                </div>
-                <div className={classes.asbox}>
-                    <div className={classes.ashead}>
-                        <h1>A</h1>
-                    </div>
-                    <div className={classes.asbody}>
-                        <div className={`${classes.assbox} ${classes.asactive}`}>
-                            <p>Amazon</p>
-                            <KeyboardArrowRightIcon/>
-                        </div>
-                        <div className={classes.assbox}>
-                            <p>Amazon</p>
-                            <KeyboardArrowRightIcon/>
-                        </div>
-                        <div className={classes.assbox}>
-                            <p>Amazon</p>
-                            <KeyboardArrowRightIcon/>
-                        </div>
-                        <div className={classes.assbox}>
-                            <p>Amazon</p>
-                            <KeyboardArrowRightIcon/>
-                        </div>
-                        <div className={classes.assbox}>
-                            <p>Amazon</p>
-                            <KeyboardArrowRightIcon/>
-                        </div>
-                    </div>
-                </div>
-            </aside>
+            <aside className={classes.aside}>{sideBar}</aside>
             <div className={classes.body}>{children}</div>
           </div>
         </section>
