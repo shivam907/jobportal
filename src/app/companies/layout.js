@@ -5,11 +5,17 @@ import data from "@/data/company.json";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import Link from "next/link";
+
+import { usePathname } from 'next/navigation'
 import React from "react";
 const layout = ({children}) => {
   // console.log(Object.keys(data.data))
   const [sideBar, setSideBar] = React.useState();
+  const [menu, setMenu] = React.useState(0);
+  const pathname = usePathname()
   React.useEffect(() => {
+    const currUrl = pathname.slice(11, pathname.length)
     const keys = Object.keys(data.data).sort();
     const groupedData = keys.reduce((acc, curr) => {
       const firstChar = curr[0].toLowerCase();
@@ -22,15 +28,19 @@ const layout = ({children}) => {
     }, {});
     console.log(groupedData);
     let arr = [];
+    let curr=0;
     Object.keys(groupedData).forEach((i) => {
       let temp = [];
       groupedData[i].forEach((j) => {
         temp.push(
-          <div className={classes.assbox}>
+        <Link href={`/companies/${j.split(" ").join("")}`}>
+          <div onClick={()=>setMenu(j.split(" ").join(""))} className={`${classes.assbox} ${j.split(" ").join("")==currUrl?classes.asactive:""}`}>
             <p>{j}</p>
             <KeyboardArrowRightIcon />
           </div>
+        </Link>
         );
+        curr+=1;
       });
       arr.push(
         <div className={classes.asbox}>
@@ -42,7 +52,7 @@ const layout = ({children}) => {
       );
     });
     setSideBar(arr);
-  }, []);
+  }, [menu, pathname]);
   return (
     <>
       <Navbar />
