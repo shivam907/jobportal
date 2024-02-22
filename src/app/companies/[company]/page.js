@@ -19,6 +19,23 @@ const page = (props) => {
             const b = await a.json();
             console.log("hmmm")
             console.log(b)
+            let arr = [];
+            b.data.forEach((i) => {
+              arr.push(
+                <JobBox
+                scraped={true}
+                  jobName={i.title}
+                  date={i.postingDate}
+                  salary={i.salary}
+                  companyName="Coupa"
+                  experience={i.experience}
+                  location={i.location}
+                  description={i.description.slice(0, 100)}
+                  link={i.applyLink}
+                />
+              );
+            });
+            setJob(arr);
         }
         else{
         const a = await fetch(data.data[props.params.company]);
