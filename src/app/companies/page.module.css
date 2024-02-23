@@ -66,11 +66,25 @@
   color: #fff;
 }
 .body{
-  width: 120rem;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  /* width: 120rem; */
+  /* position: relative; */
+  /* height: fit-content; */
+  /* background-color: aqua; */
+  /* margin: 0 auto; */
+  /* position: sticky; */
+}
+.container{
+  display: flex;
+  /* grid-template-columns: 1fr 1fr; */
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  /* height: fit-content; */
+  /* position: sticky;
+  top: 0;
+  bottom: 0; */
   gap: 3rem;
+
 }
 .manual{
   width: 120rem;
@@ -84,11 +98,57 @@
 .latest{
   font-size: 2rem;
 }
-
-.specific{
+.jobbody{
   width: 120rem;
-  margin: 5rem auto;
-  background-color: #f7f7fe;
-  padding: 5rem 3rem;
-  /* background-color: #87cefa; */
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 3rem;
+}
+.aside{
+  /* width: 40rem;
+  height: 40rem; */
+  background-color:#fff;
+  padding: 1rem;
+  border-radius: 0.7rem;
+}
+.asbox{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.ashead{
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #00000050;
+  margin-bottom: 1rem;
+}
+.ashead h1{
+  font-size: 1.8rem;
+}
+.asbox{
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+.assbox{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  padding-left: 5rem;
+}
+.assbox p{
+  font-size: 1.4rem;
+  color: #000000bc;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.asactive{
+  background-color: #f7f7fe !important;
+}
+.assbox:hover{
+  background-color: #00000010;
+  cursor: pointer;
+}
+.asbody a{
+  text-decoration: none;
 }

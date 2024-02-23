@@ -107,6 +107,9 @@
     color: #5964DF;
     /* color: #202020; */
 }
+.footer a{
+    text-decoration: none;
+}
 .apply .icon{
     font-size: 1.8rem !important;
 }

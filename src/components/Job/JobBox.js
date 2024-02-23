@@ -9,6 +9,67 @@ import Link from "next/link";
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from "@mui/icons-material/Delete";
 const JobBox = (props) => {
+  function extractDate(inputString) {
+  const regex = /(\d+)\s+(second|minute|hour|day|week|month|year)s?\s+ago/i;
+  const match = inputString.match(regex);
+  
+  if (match) {
+    const quantity = parseInt(match[1]);
+    const unit = match[2].toLowerCase();
+    const currentDate = new Date();
+    
+    switch (unit) {
+      case 'second':
+        currentDate.setSeconds(currentDate.getSeconds() - quantity);
+        break;
+      case 'minute':
+        currentDate.setMinutes(currentDate.getMinutes() - quantity);
+        break;
+      case 'hour':
+        currentDate.setHours(currentDate.getHours() - quantity);
+        break;
+      case 'day':
+        currentDate.setDate(currentDate.getDate() - quantity);
+        break;
+      case 'week':
+        currentDate.setDate(currentDate.getDate() - quantity * 7);
+        break;
+      case 'month':
+        currentDate.setMonth(currentDate.getMonth() - quantity);
+        break;
+      case 'year':
+        currentDate.setFullYear(currentDate.getFullYear() - quantity);
+        break;
+      default:
+        break;
+    }
+    
+  const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+    const day = currentDate.getDate();
+    const monthName = months[currentDate.getMonth()];
+    const year = currentDate.getFullYear();
+    
+    return `${day} ${monthName} ${year}`;
+  }
+  
+  return null;
+}
+
+// Example usage
+
   const d = new Date(props.date);
   const months = [
     "Jan",
@@ -32,12 +93,12 @@ const JobBox = (props) => {
     months[parseInt(d.getMonth() + 1) - 1] +
     " " +
     d.getFullYear();
-    if(newDate.getFullYear()-d.getFullYear()>1) return null;
-    if(newDate.getFullYear()!=d.getFullYear()){
-    console.log(months[parseInt(newDate.getMonth()+1)-1]+"  "+months[parseInt(d.getMonth()+1)-1])
-    console.log(months.indexOf(months[parseInt(d.getMonth()+1)])-months.indexOf(months[parseInt(newDate.getMonth()+1)]))
-    if(months.indexOf(months[parseInt(d.getMonth()+1)])-months.indexOf(months[parseInt(newDate.getMonth()+1)])>=6) return null;
-  }
+    // if(newDate.getFullYear()-d.getFullYear()>1) return null;
+    // if(newDate.getFullYear()!=d.getFullYear()){
+    // console.log(months[parseInt(newDate.getMonth()+1)-1]+"  "+months[parseInt(d.getMonth()+1)-1])
+    // console.log(months.indexOf(months[parseInt(d.getMonth()+1)])-months.indexOf(months[parseInt(newDate.getMonth()+1)]))
+    // if(months.indexOf(months[parseInt(d.getMonth()+1)])-months.indexOf(months[parseInt(newDate.getMonth()+1)])>=6) return null;
+  // }
   const deleteJob = async () => {
     const a = await fetch("http://localhost:4000/api/delete", {
       method: "POST",
@@ -124,7 +185,7 @@ const JobBox = (props) => {
       <div className={classes.footer}>
         <div className={classes.date}>
           <h1>Posted:</h1>
-          <p>{date}</p>
+          <p>{props.scraped?extractDate(props.date):date}</p>
         </div>
         <Link href={props.link}>
           <div className={classes.apply}>

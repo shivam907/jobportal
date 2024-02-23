@@ -14,12 +14,14 @@
 .btn2{
     padding: 0.75rem 2rem;
     background-color: #fff;
-    border: 1px solid #5964DF;
+    /* border: 1px solid #5964DF; */
+    border: none;
     border-radius: 0.3rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
     color: #5964DF;
     font-size: 1.5rem;
     cursor: pointer;
 }
 .btn2:hover{
-    background-color: #404ccf10;
+    background-color: #ffffffd7;
 }
