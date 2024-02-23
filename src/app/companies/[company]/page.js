@@ -6,8 +6,6 @@ const page = (props) => {
     const [job, setJob] = React.useState();
     React.useEffect(()=>{
         const fun = async()=>{
-        console.log(data.data[props.params.company])
-        console.log("hm")
         if(data.data[props.params.company].includes("naukri.com")){
             const a = await fetch('/companies/api', {
                 method: 'POST',
@@ -17,7 +15,6 @@ const page = (props) => {
                 body: JSON.stringify({ url: data.data[props.params.company] }),
             })
             const b = await a.json();
-            console.log("hmmm")
             console.log(b)
             let arr = [];
             b.data.forEach((i) => {
@@ -27,7 +24,7 @@ const page = (props) => {
                   jobName={i.title}
                   date={i.postingDate}
                   salary={i.salary}
-                  companyName="Coupa"
+                  companyName={props.params.company}
                   experience={i.experience}
                   location={i.location}
                   description={i.description.slice(0, 100)}
@@ -45,13 +42,12 @@ const page = (props) => {
         b.forEach((i) => {
             console.log(i)
             if(i.postings){
-                console.log("posting")
                 i.postings.forEach((j) => {
                 arr.push(
                     <JobBox
                     jobName={j.text}
                     date={j.createdAt}
-                    companyName="Clevertap"
+                    companyName={props.params.company}
                     location={j.categories.location}
                     role={j.categories.commitment}
                     description={j.descriptionPlain.slice(0, 100)}
@@ -61,12 +57,11 @@ const page = (props) => {
             });
         }
         else {
-            console.log("no posting")
             arr.push(
               <JobBox
                 jobName={i.text}
                 date={i.createdAt}
-                companyName="Coupa"
+                companyName={props.params.company}
                 location={i.categories.location}
                 role={i.categories.commitment}
                 description={i.descriptionPlain.slice(0, 100)}
