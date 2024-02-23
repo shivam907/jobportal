@@ -23,6 +23,16 @@
     "pesto": "https://api.lever.co/v0/postings/PestoTech?mode=json&team=Marketing&team=Engineering",
     "paytm": "https://api.lever.co/v0/postings/paytm?mode=json",
     "coupa": "https://api.lever.co/v0/postings/coupa?mode=json&department=Development",
-    "amazon": "https://www.naukri.com/amazon-overview-398058?tab=jobs&functionAreaIdGid=5&functionAreaIdGid=8&functionAreaIdGid=3&searchId=17022440542154303_17&src=orgCompanyListing"
+    "amazon": "https://www.naukri.com/amazon-overview-398058?tab=jobs&functionAreaIdGid=5&functionAreaIdGid=8&functionAreaIdGid=3&searchId=17022440542154303_17&src=orgCompanyListing",
+    "swiggy": "https://www.naukri.com/swiggy-overview-1285014?tab=jobs&searchId=17086467324105937&src=orgCompanyListing",
+    "flipkart": "https://www.naukri.com/flipkart-overview-533532?tab=jobs&functionAreaIdGid=5&searchId=17086467324105937&src=orgCompanyListing",
+    "sharechat": "https://www.naukri.com/sharechat-overview-4628571?tab=jobs",
+    "cultfit": "https://www.naukri.com/cult-fit-overview-4586347?tab=jobs&functionAreaIdGid=5&searchId=17086467324105937&src=orgCompanyListing",
+    "oyo": "https://www.naukri.com/oyo-overview-1027760?tab=jobs&searchId=17086467324105937&src=orgCompanyListing",
+    "urbancompany": "https://www.naukri.com/urban-company-uc-overview-1221608?tab=jobs&functionAreaIdGid=5&searchId=17086467324105937&src=orgCompanyListing",
+    "ola": "https://www.naukri.com/ola-overview-1205138?tab=jobs&functionAreaIdGid=5&searchId=17086467324105937_1&src=orgCompanyListing",
+    "razorpay": "https://www.naukri.com/razorpay-overview-4622851?tab=jobs&functionAreaIdGid=5&searchId=17086467324105937_1&src=orgCompanyListing",
+    "zomato": "https://www.naukri.com/zomato-overview-641374?tab=jobs&searchId=17086467324105937_1&src=orgCompanyListing",
+    "phonepe": "https://www.naukri.com/phonepe-overview-2872246?tab=jobs&functionAreaIdGid=5&searchId=17086467324105937_1&src=orgCompanyListing"
   }
 }
