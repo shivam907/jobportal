@@ -20,6 +20,7 @@ const page = (props) => {
             b.data.forEach((i) => {
               arr.push(
                 <JobBox
+                key={Math.random()}
                 scraped={true}
                   jobName={i.title}
                   date={i.postingDate}
@@ -45,6 +46,7 @@ const page = (props) => {
                 i.postings.forEach((j) => {
                 arr.push(
                     <JobBox
+                    key={Math.random()}
                     jobName={j.text}
                     date={j.createdAt}
                     companyName={props.params.company}
@@ -59,6 +61,7 @@ const page = (props) => {
         else {
             arr.push(
               <JobBox
+              key={Math.random()}
                 jobName={i.text}
                 date={i.createdAt}
                 companyName={props.params.company}

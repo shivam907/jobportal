@@ -179,9 +179,9 @@ const JobBox = (props) => {
           </div>
         )}
       </div>
-      {/* <div className={classes.column}>
+      <div className={classes.column}>
         <p className={classes.para}>{props.description}</p>
-      </div> */}
+      </div>
       <div className={classes.footer}>
         <div className={classes.date}>
           <h1>Posted:</h1>

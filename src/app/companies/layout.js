@@ -17,6 +17,7 @@ const layout = ({children}) => {
   React.useEffect(() => {
     const currUrl = pathname.slice(11, pathname.length)
     const keys = Object.keys(data.data).sort();
+    console.log(keys.length)
     const groupedData = keys.reduce((acc, curr) => {
       const firstChar = curr[0].toLowerCase();
       if (!acc[firstChar]) {
@@ -26,15 +27,15 @@ const layout = ({children}) => {
       }
       return acc;
     }, {});
-    console.log(groupedData);
+    console.log(Object.keys(groupedData).length);
     let arr = [];
     let curr=0;
     Object.keys(groupedData).forEach((i) => {
       let temp = [];
       groupedData[i].forEach((j) => {
         temp.push(
-        <Link href={`/companies/${j.split(" ").join("")}`}>
-          <div onClick={()=>setMenu(j.split(" ").join(""))} className={`${classes.assbox} ${j.split(" ").join("")==currUrl?classes.asactive:""}`}>
+        <Link key={Math.random()} href={`/companies/${j.split(" ").join("")}`}>
+          <div key={Math.random()} onClick={()=>setMenu(j.split(" ").join(""))} className={`${classes.assbox} ${j.split(" ").join("")==currUrl?classes.asactive:""}`}>
             <p>{j}</p>
             <KeyboardArrowRightIcon />
           </div>
@@ -43,11 +44,11 @@ const layout = ({children}) => {
         curr+=1;
       });
       arr.push(
-        <div className={classes.asbox}>
+        <div key={Math.random()} className={classes.asbox}>
           <div className={classes.ashead}>
             <h1>{i}</h1>
           </div>
-          <div className={classes.asbody}>{temp}</div>
+          <div key={Math.random()} className={classes.asbody}>{temp}</div>
         </div>
       );
     });
