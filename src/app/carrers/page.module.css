@@ -62,3 +62,6 @@
 .icon:hover{
     transform: rotate(325deg);
 }
+.body a{
+    text-decoration: none;
+}
