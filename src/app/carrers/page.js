@@ -22,13 +22,11 @@ const page = () => {
 
               <div className={classes.arrow}></div>
             </div>
-            {/* <div className={classes.icon}>
-            <ArrowForwardIcon className={classes.arrow}/>
-          </div> */}
           </div>
         </Link>
       );
     });
+
     setCompany(arr);
     console.log(data.length);
   }, []);
@@ -43,3 +41,4 @@ const page = () => {
 };
 
 export default page;
+  
