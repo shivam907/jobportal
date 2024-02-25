@@ -1,0 +1,290 @@
+[
+  {
+    "id": 1,
+    "name": "Nagarro",
+    "link": "https://www.nagarro.com/en/careers",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLlmGeY7acFXYxX3D6UEVrzBus_w85QbptEd03GS8jq-KYOpQGBxzAVpG8c4Gvolwlxbo&usqp=CAU"
+  },
+  {
+    "id": 2,
+    "name": "Flipkart",
+    "link": "https://www.flipkartcareers.com/#!/joblist",
+    "img": "https://logos-world.net/wp-content/uploads/2020/11/Flipkart-Emblem.png"
+  },
+  {
+    "id": 3,
+    "name": "Google",
+    "link": "https://www.google.com/about/careers/applications/",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1024px-Google_%22G%22_logo.svg.png"
+  },
+  {
+    "id": 4,
+    "name": "Cisco",
+    "link": "https://jobs.cisco.com/",
+    "img": "https://jobs.cisco.com/portal/4/images/logo.svg"
+  },
+  {
+    "id": 5,
+    "name": "Amazon",
+    "link": "https://www.amazon.jobs/en-gb/job_categories/software-development",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Amazon_icon.svg/2500px-Amazon_icon.svg.png"
+  },
+  {
+    "id": 6,
+    "name": "Cadence",
+    "link": "https://cadence.wd1.myworkdayjobs.com/External_Careers",
+    "img": "https://cadence.wd1.myworkdayjobs.com/External_Careers/assets/logo"
+  },
+  {
+    "id": 7,
+    "name": "Oracle",
+    "link": "https://www.oracle.com/in/careers/",
+    "img": "https://creazilla-store.fra1.digitaloceanspaces.com/icons/3236928/oracle-icon-sm.png"
+  },
+  {
+    "id": 8,
+    "name": "Microsoft",
+    "link": "https://careers.microsoft.com/v2/global/en/home.html",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/2048px-Microsoft_logo.svg.png"
+  },
+  {
+    "id": 9,
+    "name": "PhonePe",
+    "link": "https://www.phonepe.com/careers/job-openings/",
+    "img": "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/phonepe-logo-icon.png"
+  },
+  {
+    "id": 10,
+    "name": "MAQ Software",
+    "link": "https://maqsoftware.com/careers#",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/5/55/MAQ_Software_logo.png"
+  },
+  {
+    "id": 11,
+    "name": "Geekyants",
+    "link": "https://geekyants.com/join-geekyants/",
+    "img": "https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_01e89e3753b92e45174f6c46a94dbc57/geekyants.png"
+  },
+  {
+    "id": 12,
+    "name": "Accolite",
+    "link": "https://www.accolite.com/careers/jobs-in-india/",
+    "img": "https://media.licdn.com/dms/image/D4D16AQHALhFa8eADow/profile-displaybackgroundimage-shrink_200_800/0/1700023510407?e=2147483647&v=beta&t=aBTbzePYAfsyZfzdsF7Om27XkB8sHXkNhyiDHqV3kUQ"
+  },
+  {
+    "id": 13,
+    "name": "Airtal",
+    "link": "https://eeji.fa.em3.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions",
+    "img": "https://dms.airtel.com/sites/Career/SiteAssets/HP_airtel-logo_opt.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Gartner",
+    "link": "https://jobs.gartner.com/jobs/",
+    "img": "https://www.scatech.com/wp-content/uploads/2018/09/gartner-Logo-copy-e1432054936320.jpg"
+  },
+  {
+    "id": 15,
+    "name": "SIEMENS",
+    "link": "https://jobs.siemens.com/careers",
+    "img": "https://1000logos.net/wp-content/uploads/2021/11/Siemens-logo.png"
+  },
+  {
+    "id": 16,
+    "name": "Samsung",
+    "link": "https://sec.wd3.myworkdayjobs.com/Samsung_Careers",
+    "img": "https://sec.wd3.myworkdayjobs.com/Samsung_Careers/assets/logo"
+  },
+  {
+    "id": 17,
+    "name": "Adobe",
+    "link": "https://careers.adobe.com/us/en",
+    "img": "https://static.cdnlogo.com/logos/a/90/adobe.png"
+  },
+  {
+    "id": 18,
+    "name": "Finastra",
+    "link": "https://careers.finastra.com/jobs",
+    "img": "https://logos-download.com/wp-content/uploads/2022/11/Finastra_Logo.png"
+  },
+  {
+    "id": 19,
+    "name": "FIS",
+    "link": "https://careers.fisglobal.com/us/en/c/fis-university-programinterns-jobs",
+    "img": "https://cdn.phenompeople.com/CareerConnectResources/FIGLUS/images/SmallLogoBIv2-1668201955570.png"
+  },
+  {
+    "id": 20,
+    "name": "Clever Tap",
+    "link": "https://clevertap.com/careers/",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDjWefCgGAGhO51R7KMaZxFtKpKhRnMB1E5M6uJymBujwLTfAH_PQEMPrPduEb-NXDwR8&usqp=CAU"
+  },
+  {
+    "id": 21,
+    "name": "CGI",
+    "link": "https://cgi.njoyn.com/corp/xweb/xweb.asp?CLID=21001&page=joblisting&lang=1",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/CGI_logo.svg/2560px-CGI_logo.svg.png"
+  },
+  {
+    "id": 22,
+    "name": "Dunzo",
+    "link": "https://www.dunzo.com/careers#jobs",
+    "img": "https://iconape.com/wp-content/files/th/381525/svg/381525.svg"
+  },
+  {
+    "id": 23,
+    "name": "Fampay",
+    "link": "https://www.famapp.in/jobs",
+    "img": "https://www.famapp.in/assets/images/images/pages/jobs/fampayLogo.png"
+  },
+  {
+    "id": 24,
+    "name": "Virtusa",
+    "link": "https://www.virtusa.com/careers/job-search?role=Technology%2CQA%2CDelivery#search",
+    "img": "https://www.bisinfotech.com/wp-content/uploads/2018/05/Virtusa-New-Innovation-1-390x220.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Zoho",
+    "link": "https://www.zoho.com/careers/",
+    "img": "https://www.zohowebstatic.com/sites/zweb/images/commonroot/zoho-logo-darkbg.svg"
+  },
+  {
+    "id": 26,
+    "name": "Hackerearth",
+    "link": "https://www.hackerearth.com/careers/",
+    "img": "https://static-00.iconduck.com/assets.00/hackerearth-icon-444x512-0heomwse.png"
+  },
+  {
+    "id": 27,
+    "name": "Morgan Stanley",
+    "link": "https://www.morganstanley.com/careers/career-opportunities-search",
+    "img": "https://pbs.twimg.com/profile_images/1631347869687898142/ATwo7QZZ_400x400.jpg"
+  },
+  {
+    "id": 28,
+    "name": "EY",
+    "link": "https://www.ey.com/en_in/careers",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/EY_logo_2019.svg/1200px-EY_logo_2019.svg.png"
+  },
+  {
+    "id": 29,
+    "name": "MyGate",
+    "link": "https://mygate.darwinbox.in/ms/candidate/careers",
+    "img": "https://s3-ap-southeast-1.amazonaws.com/darwinbox-data/INSTANCE1_5c8f2b9a01cdc_193/logo/5cc6cf8586bbf__tenant-avatar-193_1851691437.PNG"
+  },
+  {
+    "id": 30,
+    "name": "McAfee",
+    "link": "https://careers.mcafee.com/global/en",
+    "img": "https://companieslogo.com/img/orig/MCFE-d6ec69dd.png?t=1606629452"
+  },
+  {
+    "id": 31,
+    "name": "IQVIA",
+    "link": "https://jobs.iqvia.com/search-jobs",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Iqvia-logo-color.svg/2560px-Iqvia-logo-color.svg.png"
+  },
+  {
+    "id": 32,
+    "name": "Publicis Sapient",
+    "link": "https://careers.publicissapient.com/job-search?&country=India",
+    "img": "https://careers.publicissapient.com/content/dam/ps-rebrand/brand/ps-logo-NEW.svg"
+  },
+  {
+    "id": 33,
+    "name": "JIO",
+    "link": "https://careers.jio.com/frmJobCategories.aspx?n=1",
+    "img": "https://1000logos.net/wp-content/uploads/2021/07/Jio-Logo.png"
+  },
+  {
+    "id": 34,
+    "name": "PWC",
+    "link": "https://www.pwc.com/gx/en/careers/experienced-job-search.html",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Logo-pwc.png"
+  },
+  {
+    "id": 35,
+    "name": "Razorpay",
+    "link": "https://razorpay.com/jobs/#joinus",
+    "img": "https://images.softwaresuggest.com/software_logo/1545304847_rzp-glyph-positive.png"
+  },
+  {
+    "id": 36,
+    "name": "SAP",
+    "link": "https://jobs.sap.com/?locale=en_US",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/SAP_2011_logo.svg/2560px-SAP_2011_logo.svg.png"
+  },
+  {
+    "id": 37,
+    "name": "Media (.) net",
+    "link": "https://careers.media.net/engineering/",
+    "img": "https://ml.globenewswire.com/Resource/Download/c3537d6e-99b9-4ca1-a2d8-36d02ea5b116"
+  },
+  {
+    "id": 38,
+    "name": "BYJU'S",
+    "link": "https://byjus.com/careers-at-byjus/#join-our-team",
+    "img": "https://1000logos.net/wp-content/uploads/2021/12/Byjus-Logo.png"
+  },
+  {
+    "id": 39,
+    "name": "TCS",
+    "link": "https://www.tcs.com/careers/india",
+    "img": "https://companieslogo.com/img/orig/TCS.NS-7401f1bd.png?t=1631949260"
+  },
+  {
+    "id": 40,
+    "name": "Infosys",
+    "link": "https://career.infosys.com/joblist",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Infosys_logo.svg/1280px-Infosys_logo.svg.png"
+  },
+  {
+    "id": 41,
+    "name": "Cognizant",
+    "link": "https://careers.cognizant.com/global/en",
+    "img": "https://cdn.phenompeople.com/CareerConnectResources/prod/COGNGLOBAL/images/Cognizant-logo-2022-155x48-1649775826145.png"
+  },
+  {
+    "id": 42,
+    "name": "Wipro",
+    "link": "https://careers.wipro.com/careers-home/",
+    "img": "https://cms.jibecdn.com/prod/wipro/assets/HEADER-NAV_LOGO-en-us-1698423772812.png"
+  },
+  {
+    "id": 43,
+    "name": "Capgemini",
+    "link": "https://www.capgemini.com/careers/join-capgemini/job-search/#size=15",
+    "img": "https://www.capgemini.com/wp-content/themes/capgemini2020/assets/images/logo.svg"
+  },
+  {
+    "id": 44,
+    "name": "DXC",
+    "link": "https://careers.dxc.com/global/en/home",
+    "img": "https://cdn.phenompeople.com/CareerConnectResources/DXTEGLOBAL/images/header-logo-1644231922264.png"
+  },
+  {
+    "id": 45,
+    "name": "HCL",
+    "link": "https://www.hcltech.com/careers/careers-in-india",
+    "img": "https://www.hcltech.com/themes/custom/hcltech/images/hcltech-new-logo.svg"
+  },
+  {
+    "id": 46,
+    "name": "Hashedin",
+    "link": "https://hashedin.com/careers/#opportunities",
+    "img": "https://bbdnitm.ac.in/wp-content/uploads/2020/07/hashedin-logo.png"
+  },
+  {
+    "id": 47,
+    "name": "Hexaware",
+    "link": "https://jobs.hexaware.com/",
+    "img": "https://cdn.worldvectorlogo.com/logos/hexaware-technologies-1.svg"
+  },
+  {
+    "id": 48,
+    "name": "IBM",
+    "link": "https://www.ibm.com/in-en/careers",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/1000px-IBM_logo.svg.png"
+  }
+]

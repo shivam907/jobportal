@@ -1,4 +1,3 @@
-"use client"
 import React, { useState, useEffect, useMemo } from 'react';
 import data from "@/data/company.json";
 import JobBox from '@/components/Job/JobBox';
@@ -67,29 +66,3 @@ const fetchData = async (company) => {
     
     return result;
 };
-
-const Page = (props) => {
-    const [jobs, setJobs] = useState([]);
-    const [loading, setLoading] = useState(true);
-
-    const memoizedFetchData = useMemo(() => fetchData, []);
-
-    useEffect(() => {
-        const fetchJobs = async () => {
-            setLoading(true);
-            const jobData = await memoizedFetchData(props.params.company);
-            setJobs(jobData);
-            setLoading(false);
-        };
-
-        fetchJobs();
-    }, [memoizedFetchData, props.params.company]);
-
-    return (
-        <>
-            {loading ? <Loader /> : jobs}
-        </>
-    );
-};
-
-export default Page;

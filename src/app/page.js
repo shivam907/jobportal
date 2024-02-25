@@ -5,6 +5,7 @@ import JobBox from "@/components/Job/JobBox";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import React from "react";
+import Hero from "@/components/Hero/Hero";
 export default function Home() {
     const [job, setJob] = React.useState();
   React.useEffect(() => {
@@ -38,32 +39,7 @@ export default function Home() {
     <>
     <Navbar/>
     <main className={classes.main}>
-      <div className={classes.hero}>
-        <div className={classes.bar}>
-          <div className={classes.input}>
-            <img src="./search.svg" alt="" />
-            <input
-              type="text"
-              name=""
-              id=""
-              placeholder="Search for Companies, Keyword "
-            />
-          </div>
-          <div className={classes.input}>
-            <img src="./location.png" alt="" />
-            <input type="text" name="" id="" placeholder="Location" />
-          </div>
-          <div className={classes.input}>
-            <img src="./work.svg" alt="" />
-            <input type="text" name="" id="" placeholder="Experience" />
-          </div>
-          <Button1>Search</Button1>
-        </div>
-        {/* <div className={classes.text}>
-          <input type="checkbox" name="" id="" />
-          <label htmlFor="">Freshers Only</label>
-        </div> */}
-      </div>
+    <Hero/>
       <section className={classes.manual}>
         {/* <div className={classes.specific}>
           <h1>See Company Specific Job Posting</h1>
