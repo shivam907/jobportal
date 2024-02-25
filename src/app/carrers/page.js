@@ -17,7 +17,11 @@ const page = () => {
             <div className={classes.img}>
               <img src={i.img} alt="" />
             </div>
-            <h1>{i.name}</h1>
+            <div className={classes.name}>
+              <h1>{i.name}</h1>
+
+              <div className={classes.arrow}></div>
+            </div>
             {/* <div className={classes.icon}>
             <ArrowForwardIcon className={classes.arrow}/>
           </div> */}
