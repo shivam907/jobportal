@@ -7,6 +7,7 @@ const page = () => {
   const [name, setName]=React.useState()
   const [email, setEmail]=React.useState()
   const [otp, setOtp]=React.useState()
+  const [realOtp, setRealOtp] = React.useState();
   const [otpD, setOtpD] = React.useState(true)
   const [btnD, setBtnD] = React.useState(false)
   const [emailD, setEmailD] = React.useState(false)
@@ -14,6 +15,22 @@ const page = () => {
   const [password, setPassword]=React.useState()
   const [cpassword, setCPassword]=React.useState()
 
+  const sendOtp = async () => {
+    console.log("ys");
+    if (email.includes("@") && email.includes(".")) {
+      const a = await fetch("/register/api/otp", {
+        method: "POST",
+        body: JSON.stringify({
+          email: email,
+        }),
+      });
+      const b = await a.json();
+      setRealOtp(b.otp);
+      setOtpD(false);
+      setBtnD(true);
+      setEmailD(true);
+    }
+  };
   const nameHandler=(e)=>{
     setName(e.target.value)
   }
@@ -40,17 +57,28 @@ const page = () => {
         <div className={classes.right}>
           <h1>Register</h1>
           <div className={classes.inputs}>
-            <Input label="Enter Name" type="text" onSubmit={nameHandler} placeholder="John Doe" />
+            <Input
+              label="Enter Name"
+              type="text"
+              onSubmit={nameHandler}
+              placeholder="John Doe"
+            />
 
             <div className={classes.otp}>
-            <Input
-              label="Enter Email"
-              onSubmit={emailHandler}
-              type="email"
-              disabled={emailD}
-              placeholder="name@email.com"
-            />
-            <button disabled={btnD} className={classes.otpbtn}>Send Otp</button>
+              <Input
+                label="Enter Email"
+                onSubmit={emailHandler}
+                type="email"
+                disabled={emailD}
+                placeholder="name@email.com"
+              />
+              <button
+                onClick={sendOtp}
+                disabled={btnD}
+                className={classes.otpbtn}
+              >
+                Send Otp
+              </button>
             </div>
 
             <Input
@@ -60,7 +88,7 @@ const page = () => {
               disabled={otpD}
               placeholder="Enter 6 digit long Otp"
             />
-            
+
             <Input
               label="Enter College Name"
               type="text"
