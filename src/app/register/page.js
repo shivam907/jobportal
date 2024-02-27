@@ -3,7 +3,10 @@ import React from "react";
 import classes from "./page.module.css";
 import Input from "@/components/Input/Input";
 import Button1 from "@/components/Buttons/Button1";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const page = () => {
+  const [tooast, setToast] = React.useState(false);
   const [name, setName]=React.useState()
   const [email, setEmail]=React.useState()
   const [otp, setOtp]=React.useState()
@@ -14,7 +17,9 @@ const page = () => {
   const [college, setCollege]=React.useState()
   const [password, setPassword]=React.useState()
   const [cpassword, setCPassword]=React.useState()
-
+  React.useEffect(() => {
+    setToast(false);
+  }, []);
   const sendOtp = async () => {
     console.log("ys");
     if (email.includes("@") && email.includes(".")) {
@@ -49,8 +54,41 @@ const page = () => {
   const cpasswordHandler=(e)=>{
     setCPassword(e.target.value)
   }
-  const formHandler=()=>{}
+  const formHandler=()=>{
+    console.log("hjk")
+    if(!name || name?.length<2){
+      return toast.error("Please enter your name",{
+        className: classes.toast
+      });
+    }
+    if(!email || email?.length<4 || !email?.includes('@') || !email?.includes('.')){
+      return toast.error("Please enter your email",{
+        className: classes.toast
+      });
+    }
+    if(!otp || otp!=realOtp){
+      return toast.error("Please enter correct Otp",{
+        className: classes.toast
+      });
+    }
+    if(!college || college?.length<2){
+      return toast.error("Please enter college name",{
+        className: classes.toast
+      });
+    }
+    if(!password||password?.length<7){
+      return toast.error("Password must be atleas 7 character long",{
+        className: classes.toast
+      });
+    }
+    if(!cpassword||password!=cpassword){
+      return toast.error("Confirm Password Does't match",{
+        className: classes.toast
+      });
+    }
+  }
   return (
+    <>
     <div className={classes.body}>
       <div className={classes.register}>
         <div className={classes.left}></div>
@@ -112,6 +150,8 @@ const page = () => {
         </div>
       </div>
     </div>
+    <ToastContainer/>
+    </>
   );
 };
 
