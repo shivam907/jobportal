@@ -71,7 +71,6 @@ const page = () => {
                 label="Enter Email"
                 onSubmit={emailHandler}
                 type="email"
-                disabled={emailD}
                 placeholder="name@email.com"
               />
             <Input
