@@ -30,6 +30,12 @@ const page = () => {
         }),
       });
       const b = await a.json();
+      if (b.exist) {
+        console.log("yes")
+        return toast.error("Email Already Exist", {
+          className: classes.toast,
+        });
+      }
       setRealOtp(b.otp);
       setOtpD(false);
       setBtnD(true);
@@ -102,12 +108,23 @@ const page = () => {
       }),
     });
     const b = await a.json();
+    if (b.exist) {
+      toast.error("Email Already Exist", {
+        className: classes.toast,
+      });
+    } else {
+      toast.success("Registered Successfully", {
+        className: classes.toast,
+      });
+    }
   };
   return (
     <>
     <div className={classes.body}>
       <div className={classes.register}>
-        <div className={classes.left}></div>
+        <div className={classes.left}>
+          <img src="/bg.png" alt="" />
+        </div>
         <div className={classes.right}>
           <h1>Register</h1>
           <div className={classes.inputs}>

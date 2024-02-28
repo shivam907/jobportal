@@ -10,6 +10,9 @@ export default function Home() {
     const [job, setJob] = React.useState();
   React.useEffect(() => {
     const jobs = async () => {
+      const aa = await fetch("/api");
+      const bb = await aa.json();
+      console.log(bb)
       const a = await fetch("/admin/dashboard/jobs/api");
       const b = await a.json();
       let arr = [];

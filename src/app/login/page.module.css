@@ -29,6 +29,7 @@
 .inputs{
     display: flex;
     flex-direction: column;
+    margin-top: 5rem;
     gap: 1rem;
 }
 .right h1{
@@ -63,8 +64,4 @@
 }
 .toast{
     font-size: 1.6rem;
-}
-.left{
-    display: flex;
-    align-items: flex-end;
 }
