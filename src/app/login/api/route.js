@@ -6,11 +6,14 @@ export async function POST(req) {
   const data = await req.json();
   connectToDB();
   console.log(data);
-  const ifuser = await User.find({ email: data.email });
-  if (ifuser.length > 0) {
-    return Response.json({ exist: true });
+  const ifuser = await User.findOne({ email: data.email });
+  if (!ifuser) {
+    return Response.json({ error: true });
   }
-  const user = new User(data);
-  await user.save();
-  return Response.json({ exist: false });
+  const validPassword = await bcryptjs.compare(data.password, ifuser.password);
+  if (!validPassword) {
+    return NextResponse.json({ error: true });
+  }
+  return Response.json({ error: false });
+  return Response.json({ error: false });
 }
