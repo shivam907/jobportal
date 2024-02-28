@@ -54,39 +54,55 @@ const page = () => {
   const cpasswordHandler=(e)=>{
     setCPassword(e.target.value)
   }
-  const formHandler=()=>{
-    console.log("hjk")
-    if(!name || name?.length<2){
-      return toast.error("Please enter your name",{
-        className: classes.toast
+  const formHandler = async () => {
+    console.log("hjk");
+    if (!name || name?.length < 2) {
+      return toast.error("Please enter your name", {
+        className: classes.toast,
       });
     }
-    if(!email || email?.length<4 || !email?.includes('@') || !email?.includes('.')){
-      return toast.error("Please enter your email",{
-        className: classes.toast
+    if (
+      !email ||
+      email?.length < 4 ||
+      !email?.includes("@") ||
+      !email?.includes(".")
+    ) {
+      return toast.error("Please enter your email", {
+        className: classes.toast,
       });
     }
-    if(!otp || otp!=realOtp){
-      return toast.error("Please enter correct Otp",{
-        className: classes.toast
+    if (!otp || otp != realOtp) {
+      return toast.error("Please enter correct Otp", {
+        className: classes.toast,
       });
     }
-    if(!college || college?.length<2){
-      return toast.error("Please enter college name",{
-        className: classes.toast
+    if (!college || college?.length < 2) {
+      return toast.error("Please enter college name", {
+        className: classes.toast,
       });
     }
-    if(!password||password?.length<7){
-      return toast.error("Password must be atleas 7 character long",{
-        className: classes.toast
+    if (!password || password?.length < 7) {
+      return toast.error("Password must be atleas 7 character long", {
+        className: classes.toast,
       });
     }
-    if(!cpassword||password!=cpassword){
-      return toast.error("Confirm Password Does't match",{
-        className: classes.toast
+    if (!cpassword || password != cpassword) {
+      return toast.error("Confirm Password Does't match", {
+        className: classes.toast,
       });
     }
-  }
+    console.log("bc")
+    const a = await fetch("/register/api", {
+      method: "POST",
+      body: JSON.stringify({
+        email,
+        name,
+        password,
+        college,
+      }),
+    });
+    const b = await a.json();
+  };
   return (
     <>
     <div className={classes.body}>
