@@ -1,5 +1,6 @@
 "use server";
 import { cookies } from "next/headers";
+import User from "@/lib/models/User.model";
 import nodemailer from "nodemailer"
 const transporter = nodemailer.createTransport({
   service: "gmail",
@@ -29,8 +30,13 @@ const transporter = nodemailer.createTransport({
 
 export async function POST(req) {
   const data = await req.json();
+    const ifuser= await User.find({email: data.email});
+  if(ifuser.length>0){
+    console.log(ifuser)
+    return Response.json({ exist: true });
+  }
   console.log(data);
   const otp =Math.floor(Math.random() * 900000) + 100000;
   const res = await sendEmail(String(otp), data.email);
-  return Response.json({ sent: res, otp: otp });
+  return Response.json({ sent: res, otp: otp, exist:false });
 }

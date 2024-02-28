@@ -68,7 +68,7 @@ const Dashboard = () => {
           toast.error("Please Fill the Form Correctly",{
       className: classes.toast
     });
-    }else{
+  }else{
     const res = await fetch("/admin/dashboard/api", {
       method: "POST",
       credentials: "include",
@@ -85,7 +85,7 @@ const Dashboard = () => {
         link: link,
       }),
     });
-    await res.json();
+    const ans=await res.json();
     setToast(true);    
     toast.success("Successfully Added To Cart",{
       className: classes.toast
