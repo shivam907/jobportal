@@ -122,18 +122,12 @@ const page = () => {
     <>
     <div className={classes.body}>
       <div className={classes.register}>
-        <div className={classes.left}></div>
+        <div className={classes.left}>
+          <img src="/bg.png" alt="" />
+        </div>
         <div className={classes.right}>
-          <h1>Register</h1>
+          <h1>Log In</h1>
           <div className={classes.inputs}>
-            <Input
-              label="Enter Name"
-              type="text"
-              onSubmit={nameHandler}
-              placeholder="John Doe"
-            />
-
-            <div className={classes.otp}>
               <Input
                 label="Enter Email"
                 onSubmit={emailHandler}
@@ -141,42 +135,14 @@ const page = () => {
                 disabled={emailD}
                 placeholder="name@email.com"
               />
-              <button
-                onClick={sendOtp}
-                disabled={btnD}
-                className={classes.otpbtn}
-              >
-                Send Otp
-              </button>
-            </div>
-
-            <Input
-              label="Enter OTP"
-              type="number"
-              onSubmit={otpHandler}
-              disabled={otpD}
-              placeholder="Enter 6 digit long Otp"
-            />
-
-            <Input
-              label="Enter College Name"
-              type="text"
-              onSubmit={collegeHandler}
-              placeholder="Chandigarh Engineering College"
-            />
             <Input
               label="Enter Password"
-              type="text"
+              type="password"
               onSubmit={passwordHandler}
               placeholder="Alphanumeric and be 6 character long"
             />
-            <Input
-              label="Confirm Password"
-              type="password"
-              onSubmit={cpasswordHandler}
-              placeholder="Alphanumeric and be 6 character long"
-            />
-            <Button1 onSubmit={formHandler}>Submit</Button1>
+
+            <Button1 onSubmit={formHandler}>Log In</Button1>
           </div>
         </div>
       </div>

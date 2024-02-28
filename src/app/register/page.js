@@ -122,7 +122,9 @@ const page = () => {
     <>
     <div className={classes.body}>
       <div className={classes.register}>
-        <div className={classes.left}></div>
+        <div className={classes.left}>
+          <img src="/bg.png" alt="" />
+        </div>
         <div className={classes.right}>
           <h1>Register</h1>
           <div className={classes.inputs}>
