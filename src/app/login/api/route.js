@@ -15,5 +15,4 @@ export async function POST(req) {
     return NextResponse.json({ error: true });
   }
   return Response.json({ error: false });
-  return Response.json({ error: false });
 }
