@@ -7,11 +7,26 @@ import ChatIcon from "@mui/icons-material/Chat";
 import classes from "./stylee.module.css";
 import Link from "next/link";
 import { useRouter } from 'next/navigation'
+import {adminLogin} from "@/lib/actions"
 
 import img from "./logo.png";
 // import { cookies } from "next/headers";
 const layout = ({ children }) => {
-  const router=useRouter()
+    const router=useRouter()
+  const [display, setDisplay]=React.useState(false)
+  React.useEffect(()=>{
+    const fun=async ()=>{
+    const data= await adminLogin()
+    console.log("adl",data)
+    if(!data.loggedIn){
+      router.push("/admin/login")
+    }
+    else{
+      setDisplay(true)
+    }
+  }
+    fun()
+  },[])
   const [menu, setMenu] = React.useState(0);
   const menuHandler = (e) => {
     setMenu(e);
@@ -31,8 +46,8 @@ const layout = ({ children }) => {
     // });
     //ss
   };
-  return (
-    <div className={classes.nav}>
+  return (<>
+    {display && <div className={classes.nav}>
       <nav className={classes.navBar}>
         <div className={classes.navIn}>
           <a href="/s" className={classes.logo}>
@@ -87,7 +102,8 @@ const layout = ({ children }) => {
         </div>
       </nav>
       <div className={classes.body}>{children}</div>
-    </div>
+    </div>}
+    </>
   );
 };
 
