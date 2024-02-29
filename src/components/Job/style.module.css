@@ -216,6 +216,7 @@
 	}
 	
 .apply:hover p{
+    cursor: pointer;
     color: #5964DF;
 }
 .toast{

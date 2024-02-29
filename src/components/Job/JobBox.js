@@ -213,8 +213,8 @@ const JobBox = (props) => {
           </div>
         {/* </Link> */}
       </div>
-    </div>
     <ToastContainer/>
+    </div>
     </>
   );
 };

@@ -30,7 +30,7 @@ export default function Home() {
             location={i.location}
             role={i.type}
             description={i.description?.slice(0, 100)}
-            link={"https://h.co"}
+            link={i.link}
           />
         );
       });
