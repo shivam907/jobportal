@@ -6,15 +6,22 @@ import PowerSettingsNewIcon from "@mui/icons-material/PowerSettingsNew";
 import ChatIcon from "@mui/icons-material/Chat";
 import classes from "./stylee.module.css";
 import Link from "next/link";
+import { useRouter } from 'next/navigation'
+
 import img from "./logo.png";
 // import { cookies } from "next/headers";
 const layout = ({ children }) => {
+  const router=useRouter()
   const [menu, setMenu] = React.useState(0);
   const menuHandler = (e) => {
     setMenu(e);
     // props.current(e)
   };
   const logout = async () => {
+    const a= await fetch("/admin/dashboard/api/logout")
+    const b=await a.json()
+    console.log(b)
+    router.push("/admin/login")
     // const encryptedSessionData = { loggedIn: true };
     // cookies().set("session", JSON.stringify(encryptedSessionData), {
     //   httpOnly: true,

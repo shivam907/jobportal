@@ -3,8 +3,24 @@ import React from "react";
 import logo from "./logo.png";
 import classes from "./style.module.css";
 import { useRouter } from 'next/navigation'
+import {adminLogin} from "@/lib/actions"
 const Login = () => {
   const router=useRouter()
+  const [display, setDisplay]=React.useState(false)
+  React.useEffect(()=>{
+    const fun=async ()=>{
+    const data= await adminLogin()
+    console.log("adl",data)
+    if(data.loggedIn){
+      router.push("/admin/dashboard")
+    }
+    else{
+      setDisplay(true)
+    }
+  }
+    fun()
+  },[])
+  // console.log(adminLogin())
   const [userName, setUserName] = React.useState();
   const [password, setPassword] = React.useState();
   const usernameHandler = (e) => {
@@ -32,7 +48,8 @@ const Login = () => {
     }
   };
 
-  return (
+  return (<>
+  {display &&
     <div className={classes.body}>
       <img src={logo} alt="" className={classes.logo} />
       <div className={classes.box}>
@@ -60,6 +77,8 @@ const Login = () => {
         </button>
       </div>
     </div>
+  }
+    </>
   );
 };
 
