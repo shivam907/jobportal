@@ -218,3 +218,6 @@
 .apply:hover p{
     color: #5964DF;
 }
+.toast{
+    font-size: 1.7rem;
+}
