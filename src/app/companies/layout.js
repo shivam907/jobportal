@@ -59,16 +59,12 @@ const layout = ({children}) => {
     <>
       <Navbar />
       <main className={classes.main}>
-      <Hero/>
+        <Hero />
         <section className={classes.manual}>
-          {/* <h1 className={classes.latest}>Latest Jobs</h1> */}
           <div className={classes.jobbody}>
             <aside className={classes.aside}>{sideBar}</aside>
             <div className={classes.body}>
-            <div className={classes.container}>
-
-            {children}
-            </div>
+              <div className={classes.container}>{children}</div>
             </div>
           </div>
         </section>
@@ -78,3 +74,4 @@ const layout = ({children}) => {
   );
 }
 export default layout;
+// 6315;

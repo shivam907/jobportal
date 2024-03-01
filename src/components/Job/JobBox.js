@@ -8,7 +8,12 @@ import SchoolIcon from "@mui/icons-material/School";
 import Link from "next/link";
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from "@mui/icons-material/Delete";
+import { ToastContainer, toast } from "react-toastify";
+import {userLogin} from "@/lib/actions"
+import { useRouter } from "next/navigation";
+import "react-toastify/dist/ReactToastify.css";
 const JobBox = (props) => {
+  const router=useRouter()
   function extractDate(inputString) {
   const regex = /(\d+)\s+(second|minute|hour|day|week|month|year)s?\s+ago/i;
   const match = inputString.match(regex);
@@ -110,7 +115,19 @@ const JobBox = (props) => {
     });
     await a.json();
   };
+  const apply = async ()=>{
+    const res= await userLogin()
+    if(res.loggedIn){
+      router.push(props.link)
+    }
+    else{
+      return toast.error("Please Log in Before Accessing the Link", {
+        className: classes.toast,
+      });
+    }
+  };
   return (
+    <>
     <div key={Math.random(1) * 1000} className={classes.box}>
       {props.edit && (
         <div className={classes.edits}>
@@ -187,16 +204,18 @@ const JobBox = (props) => {
           <h1>Posted:</h1>
           <p>{props.scraped?extractDate(props.date):date}</p>
         </div>
-        <Link href={props.link}>
-          <div className={classes.apply}>
+        {/* <Link href={props.link}> */}
+          <div onClick={apply} className={classes.apply}>
             <p>View & Apply</p>
             {/* <div className={classes.arro}> */}
               <div className={classes.arrow}></div>
             {/* </div> */}
           </div>
-        </Link>
+        {/* </Link> */}
       </div>
+    <ToastContainer/>
     </div>
+    </>
   );
 };
 

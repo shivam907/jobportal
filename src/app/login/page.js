@@ -4,12 +4,27 @@ import classes from "./page.module.css";
 import Input from "@/components/Input/Input";
 import Button1 from "@/components/Buttons/Button1";
 import { ToastContainer, toast } from "react-toastify";
+import {userLogin} from "@/lib/actions"
+import { useRouter } from "next/navigation";
 import "react-toastify/dist/ReactToastify.css";
 const page = () => {
+  const router=useRouter()
   const [tooast, setToast] = React.useState(false);
   const [email, setEmail]=React.useState()
   const [password, setPassword]=React.useState()
+  const [active, setActive]=React.useState(false)
   React.useEffect(() => {
+    const fun=async()=>{
+      const res=await userLogin();
+      console.log(res);
+      if(res.loggedIn){
+        router.push("/")
+      }
+      else{
+        setActive(true)
+      }
+    }
+    fun();
     setToast(false);
   }, []);
 
@@ -55,11 +70,12 @@ const page = () => {
       toast.success("Logged In Successfully", {
         className: classes.toast,
       });
+      router.push("/")
     }
   };
   return (
     <>
-    <div className={classes.body}>
+    {active && <div className={classes.body}>
       <div className={classes.register}>
         <div className={classes.left}>
           <img src="/bg.png" alt="" />
@@ -85,6 +101,7 @@ const page = () => {
         </div>
       </div>
     </div>
+    }
     <ToastContainer/>
     </>
   );
