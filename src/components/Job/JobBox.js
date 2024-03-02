@@ -117,7 +117,9 @@ const JobBox = (props) => {
   };
   const apply = async ()=>{
     const res= await userLogin()
+    console.log("res",res)
     if(res.loggedIn){
+      console.log(props.link)
       router.push(props.link)
     }
     else{

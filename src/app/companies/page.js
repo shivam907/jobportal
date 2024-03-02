@@ -12,6 +12,7 @@ export default function Home() {
       let arr = [];
       b.jobs.forEach((i) => {
         setLoading(true)
+        console.log(i)
         arr.push(
           <JobBox
             key={Math.random(1) * 1000}
