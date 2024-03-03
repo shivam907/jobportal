@@ -27,7 +27,20 @@ export default function Home() {
       let exp=[]
       b.jobs.forEach((i) => {
         setLoading(true);
-        temp.push(i);
+        temp.push({
+          key: Math.random(1) * 1000,
+          id: i._id,
+          date: i.createdAt,
+          jobName: i.role,
+          companyName: i.companyName,
+          experience: i.experience,
+          salary: i.package,
+          degree: i.degree,
+          location: i.location,
+          role: i.type,
+          description: i.description?.slice(0, 100),
+          link: i.link,
+        });
         loc.push(i.location)
         exp.push(i.experience)
         arr.push(

@@ -45,14 +45,14 @@ const Hero = (props) => {
           <JobBox
             key={Math.random(1) * 1000}
             id={i._id}
-            date={i.createdAt}
-            jobName={i.role}
+            date={i.date}
+            jobName={i.jobName}
             companyName={i.companyName}
             experience={i.experience}
-            salary={i.package}
+            salary={i.salary}
             degree={i.degree}
             location={i.location}
-            role={i.type}
+            role={i.role}
             description={i.description?.slice(0, 100)}
             link={i.link}
           />
