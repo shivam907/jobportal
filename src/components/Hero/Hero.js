@@ -44,6 +44,7 @@ const Hero = (props) => {
         filter.push(
           <JobBox
             key={Math.random(1) * 1000}
+            scraped={i.scraped}
             id={i._id}
             date={i.date}
             jobName={i.jobName}

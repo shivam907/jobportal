@@ -25,7 +25,7 @@ const fetchData = async (company) => {
           loc.push(i.location);
           exp.push(i.experience);
           jobArray.push({
-                "key": Math.random(),
+            "key": Math.random(),
               "scraped": true,
               "jobName": i.title,
               "date": i.postingDate,

@@ -15,6 +15,10 @@ import "react-toastify/dist/ReactToastify.css";
 const JobBox = (props) => {
   const router=useRouter()
   function extractDate(inputString) {
+    console.log("dd", inputString)
+    if(inputString.includes('30+')){
+      return `30+ Days Ago`
+    }
   const regex = /(\d+)\s+(second|minute|hour|day|week|month|year)s?\s+ago/i;
   const match = inputString.match(regex);
   
