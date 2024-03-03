@@ -126,7 +126,7 @@ export default function Home() {
     <>
       <Navbar />
       <main className={classes.main}>
-    <div className={classes.hero}>
+    {/* <div className={classes.hero}>
       <div className={classes.bar}>
         <div className={classes.input}>
           <img src="./search.svg" alt="" />
@@ -141,7 +141,6 @@ export default function Home() {
         <div className={classes.input}>
           <img src="./location.png" alt="" />
           <SelectDropDown1 data={location} onChange={locationHandler} placeholder="Location"/>
-          {/* <input type="text" name="" id="" placeholder="Location" /> */}
         </div>
         <div className={classes.input}>
           <img src="./work.svg" alt="" />
@@ -149,11 +148,8 @@ export default function Home() {
         </div>
         <Button1 onSubmit={search}>Search</Button1>
       </div>
-      {/* <div className={classes.text}>
-          <input type="checkbox" name="" id="" />
-          <label htmlFor="">Freshers Only</label>
-        </div> */}
-    </div>
+    </div> */}
+    <Hero jobArray={jobArray} setFilterData={setFilterData} location={location} experience={experience} />
         <section className={classes.manual}>
           {/* <div className={classes.specific}>
           <h1>See Company Specific Job Posting</h1>
