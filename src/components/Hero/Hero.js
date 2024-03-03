@@ -67,7 +67,7 @@ const Hero = (props) => {
     <div className={classes.hero}>
       <div className={classes.bar}>
         <div className={classes.input}>
-          <img src="./search.svg" alt="" />
+          <img src="/search.svg" alt="" />
           <input
             onChange={keywordHandler}
             type="text"
@@ -77,7 +77,7 @@ const Hero = (props) => {
           />
         </div>
         <div className={classes.input}>
-          <img src="./location.png" alt="" />
+          <img src="/location.png" alt="" />
           <SelectDropDown1
             data={props.location}
             onChange={locationHandler}
@@ -86,7 +86,7 @@ const Hero = (props) => {
           {/* <input type="text" name="" id="" placeholder="Location" /> */}
         </div>
         <div className={classes.input}>
-          <img src="./work.svg" alt="" />
+          <img src="/work.svg" alt="" />
           <SelectDropDown1
             data={props.experience}
             onChange={experienceHandler}

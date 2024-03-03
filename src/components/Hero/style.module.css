@@ -17,6 +17,7 @@
 }
 .bar{
   background-color: #fff;
+  max-width: 100rem;
   box-shadow: 0 0 20px rgba(0,0,0,0.08);
   border-radius: 0.5rem;
   margin-top: 20rem;
@@ -24,7 +25,8 @@
   /* padding: 2rem; */
   display: grid;
   /* margin-bottom: 5rem; */
-  grid-template-columns: 4fr 2fr 2fr 2fr;
+  /* grid-template-columns: 4fr 2fr 2fr 2fr; */
+  display: flex;
 }
 .input{
   display: flex;
@@ -43,8 +45,9 @@
   /* background-color: aqua; */
 }
 .input input{
+  width: 40rem;
   border: none;
-  width: 100%;
+  /* width: 100%; */
   padding-left: 4rem;
   outline: none;
   font-size: 1.4rem;
