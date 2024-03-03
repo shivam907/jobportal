@@ -28,7 +28,8 @@
 }
 .input{
   display: flex;
-  padding: 2rem;
+  /* padding: 2rem; */
+  position: relative;
   align-items: center;
   gap: 1rem;
   border-right: 1px solid #00000090;
@@ -44,11 +45,14 @@
 .input input{
   border: none;
   width: 100%;
+  padding-left: 4rem;
   outline: none;
   font-size: 1.4rem;
 }
 .input img{
   width: 2.3rem;
+  left: 1rem;
+  position: absolute;
 }
 .bar button{
   padding: 1rem 3rem;
