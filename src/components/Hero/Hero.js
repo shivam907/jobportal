@@ -76,7 +76,7 @@ const Hero = (props) => {
             placeholder="Search for Companies, Keyword "
           />
         </div>
-        <div className={classes.input}>
+        <div className={classes.input1}>
           <img src="/location.png" alt="" />
           <SelectDropDown1
             data={props.location}
@@ -85,7 +85,7 @@ const Hero = (props) => {
           />
           {/* <input type="text" name="" id="" placeholder="Location" /> */}
         </div>
-        <div className={classes.input}>
+        <div className={classes.input1}>
           <img src="/work.svg" alt="" />
           <SelectDropDown1
             data={props.experience}
@@ -93,7 +93,7 @@ const Hero = (props) => {
             placeholder="Experience"
           />
         </div>
-        <Button1 onSubmit={search}>Search</Button1>
+        <button onClick={search} className={classes.btn1}>Search</button>
       </div>
       {/* <div className={classes.text}>
           <input type="checkbox" name="" id="" />

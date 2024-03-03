@@ -19,7 +19,7 @@ const SelectDropDown1 = (props) => {
             fontSize: "14px",
             padding: "10px 10px",
             paddingLeft: "35px",
-            width: "200px",
+            width: "inherit",
             color: "red",
             backgroundColor: "transparent",
           }),
