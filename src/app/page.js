@@ -90,7 +90,8 @@ export default function Home() {
           <h1>See Company Specific Job Posting</h1>
         </div> */}
           <h1 className={classes.latest}>Latest Jobs</h1>
-          <div className={classes.body}>{loading ? <Loader /> :filterData?.length>0?filterData :job}</div>
+          <div className={classes.body}>
+          {loading ? <Loader /> :filterData?.length>0?filterData :job}</div>
         </section>
       </main>
       <Footer />
