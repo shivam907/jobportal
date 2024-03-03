@@ -1,7 +1,7 @@
 'use client'
 import React from "react";
 import classes from "./style.module.css";
-import SelectDropDown from "@/components/Buttons/Select/SelectDropDown";
+import SelectDropDown from "@/components/Select/SelectDropDown";
 import Input from "@/components/Inputs/Input";
 import TextArea from "@/components/Input/TextArea";
 import { ToastContainer, toast } from "react-toastify";

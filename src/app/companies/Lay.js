@@ -10,8 +10,8 @@ import Hero from "@/components/Hero/Hero";
 
 import { usePathname } from 'next/navigation'
 import React from "react";
-const layout = ({children}) => {
-  // console.log(Object.keys(data.data))
+const Lay = (props) => {
+
   const [sideBar, setSideBar] = React.useState();
   const [menu, setMenu] = React.useState(0);
   const pathname = usePathname()
@@ -59,12 +59,12 @@ const layout = ({children}) => {
     <>
       <Navbar />
       <main className={classes.main}>
-        <Hero />
+        <Hero jobArray={props.jobArray} setFilterData={props.setFilterData} location={props.location} experience={props.experience} />
         <section className={classes.manual}>
           <div className={classes.jobbody}>
             <aside className={classes.aside}>{sideBar}</aside>
             <div className={classes.body}>
-              <div className={classes.container}>{children}</div>
+              <div className={classes.container}>{props.children}</div>
             </div>
           </div>
         </section>
@@ -73,5 +73,5 @@ const layout = ({children}) => {
     </>
   );
 }
-export default layout;
+export default Lay;
 // 6315;

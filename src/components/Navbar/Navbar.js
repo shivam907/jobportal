@@ -1,12 +1,24 @@
 import React from "react";
 import classes from "./Navbar.module.css";
-import Button1 from "../Buttons/Button1";
-import Button2
- from "../Buttons/Button2";
+import MenuIcon from "@mui/icons-material/Menu";
 
 const Navbar = () => {
+  const [scroll, changeScroll] = React.useState(false);
+  const [open, changeOpen] = React.useState(false);
+  function change() {
+    changeOpen(open ? false : true);
+  }
+  const nav = React.useRef(null);
+  React.useEffect(()=>{
+    const resizeHeaderOnScroll = () => {
+      const distanceY = window.pageYOffset || document.documentElement.scrollTop,
+        shrinkOn = 30;
+      changeScroll(distanceY > shrinkOn ? true : false);
+    };
+    window.addEventListener("scroll", resizeHeaderOnScroll);
+  },[])
   return (
-    <div className={classes.nav}>
+    <div ref={nav} className={`${classes.nav} ${scroll?classes.scroll:''}`}>
       <nav>
         <h1>LOGO</h1>
         <div className={classes.navelements}>
@@ -19,8 +31,11 @@ const Navbar = () => {
           </div>
           <div className={classes.nav2}>
           {/* <Button2>Login</Button2> */}
-          <Button2>Register</Button2>
+          <a>Register</a>
           </div>
+        </div>
+        <div className={classes.nav3}>
+          <MenuIcon className={classes.menu}/>
         </div>
       </nav>
     </div>

@@ -17,18 +17,31 @@
 }
 .bar{
   background-color: #fff;
+  max-width: 92vw;
   box-shadow: 0 0 20px rgba(0,0,0,0.08);
   border-radius: 0.5rem;
   margin-top: 20rem;
   position: absolute;
   /* padding: 2rem; */
-  display: grid;
+  /* display: grid; */
   /* margin-bottom: 5rem; */
-  grid-template-columns: 4fr 2fr 2fr 2fr;
+  /* grid-template-columns: 4fr 2fr 2fr 2fr; */
+  display: flex;
 }
 .input{
   display: flex;
-  padding: 2rem;
+  width: 30vw;
+  /* padding: 2rem; */
+  position: relative;
+  align-items: center;
+  gap: 1rem;
+  border-right: 1px solid #00000090;
+}
+.input1{
+  display: flex;
+  width: 15vw;
+  /* padding: 2rem; */
+  position: relative;
   align-items: center;
   gap: 1rem;
   border-right: 1px solid #00000090;
@@ -42,14 +55,67 @@
   /* background-color: aqua; */
 }
 .input input{
+  width: 30vw;
   border: none;
-  width: 100%;
+  /* width: 100%; */
+  padding-left: 4rem;
   outline: none;
   font-size: 1.4rem;
 }
 .input img{
   width: 2.3rem;
+  left: 1rem;
+  position: absolute;
+}
+.input1 img{
+  width: 2.3rem;
+  left: 1rem;
+  position: absolute;
 }
 .bar button{
   padding: 1rem 3rem;
+}
+.btn1{
+    padding: 0.75rem 2rem;
+    background-color: #5964DF;
+    border: none;
+    border-radius: 0.3rem;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: 1px solid #5964DF;
+}
+.btn1:hover{
+    background-color: #404ccf;
+}
+@media screen and (max-width:750px) {
+  .bar{
+    display: flex;
+    flex-direction: column;
+  }
+  .input{
+    width: 80vw;
+    border: none;
+  }
+  .input input{
+    padding: 2rem 0.5rem;
+    padding-left: 4rem;
+    border-radius: 3px;
+    width: 100%;
+  }
+  .input1{
+    border: none;
+    width: 80vw;
+  }
+  .btn1{
+    width: 100%;
+  }
+  .hero{
+    padding-bottom: 15rem;
+    /* height: 50rem; */
+    background-size: cover;
+  }
+  .bar{
+    margin-top: 30rem;
+  }
 }
