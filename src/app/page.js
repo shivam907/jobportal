@@ -16,19 +16,58 @@ export default function Home() {
   const [experience, setExperience] = React.useState([])
   const [sloc, setSloc] = React.useState()
   const [sexp, setSexp] = React.useState()
+  const [filterData, setFilterData] = React.useState()
   const [key, setKey] = React.useState()
   const locationHandler=(e)=>{
     setSloc(e.value)
   }
   const keywordHandler=(e)=>{
-    
+
     setKey(e.target.value)
   }
   const experienceHandler=(e)=>{
     setSexp(e.value)
   }
   const search = () => {
+    let filter=[]
     console.log(sloc, key, sexp)
+    jobArray.forEach(i=>{
+      let keywordMatch
+      if(key){
+      keywordMatch=Object.values(i).some(val=>{
+        if(typeof val=="string" && val.toLowerCase().includes(key.toLowerCase())){
+          return true;
+        }
+        return false;
+      })
+    }
+    let locationMatch;
+    if(sloc){
+       locationMatch = i.location.toLowerCase() === sloc.toLowerCase();
+    }
+    let experienceMatch
+    if(sexp){
+       experienceMatch = i.experience.toLowerCase() === sexp.toLowerCase();
+    }
+      if(keywordMatch || locationMatch || experienceMatch){
+        filter.push(          <JobBox
+            key={Math.random(1) * 1000}
+            id={i._id}
+            date={i.createdAt}
+            jobName={i.role}
+            companyName={i.companyName}
+            experience={i.experience}
+            salary={i.package}
+            degree={i.degree}
+            location={i.location}
+            role={i.type}
+            description={i.description?.slice(0, 100)}
+            link={i.link}
+          />)
+      }
+    })
+    setFilterData(filter)
+    console.log(filter)
   };
   React.useEffect(() => {
     const jobs = async () => {
@@ -120,7 +159,7 @@ export default function Home() {
           <h1>See Company Specific Job Posting</h1>
         </div> */}
           <h1 className={classes.latest}>Latest Jobs</h1>
-          <div className={classes.body}>{loading ? <Loader /> : job}</div>
+          <div className={classes.body}>{loading ? <Loader /> :filterData?.length>0?filterData :job}</div>
         </section>
       </main>
       <Footer />
