@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./Navbar.module.css";
 import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from '@mui/icons-material/Close';
 
 const Navbar = () => {
   const [scroll, changeScroll] = React.useState(false);
@@ -18,7 +19,7 @@ const Navbar = () => {
     window.addEventListener("scroll", resizeHeaderOnScroll);
   },[])
   return (
-    <div ref={nav} className={`${classes.nav} ${scroll?classes.scroll:''}`}>
+    <div ref={nav} className={`${classes.nav} ${scroll?classes.scroll:''} ${open?classes.zi:''}`}>
       <nav>
         <h1>LOGO</h1>
         <div className={classes.navelements}>
@@ -35,9 +36,20 @@ const Navbar = () => {
           </div>
         </div>
         <div className={classes.nav3}>
-          <MenuIcon className={classes.menu}/>
+          {open?<CloseIcon onClick={change} className={classes.menu}/>:<MenuIcon onClick={change} className={classes.menu}/>}
         </div>
       </nav>
+      {open && <div className={classes.mobile}>
+        <div className={classes.mob}>
+          <div className={classes.nav1}>
+            <div className={classes.navel}>About</div>
+            <div className={classes.navel}>Companies</div>
+            <div className={classes.navel}>Jobs</div>
+            <div className={classes.navel}>Carrers</div>
+            <div className={classes.navel}>Carrers</div>
+          </div>
+        </div>
+      </div>}
     </div>
   );
 };
