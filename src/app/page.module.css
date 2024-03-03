@@ -38,3 +38,17 @@
   padding: 5rem 3rem;
   /* background-color: #87cefa; */
 }
+
+@media screen and (max-width:750px) {
+  .manual{
+    width: 95vw;
+    padding-top: 5rem;
+    /* padding: 5rem; */
+  }
+  .body{
+    width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+}
