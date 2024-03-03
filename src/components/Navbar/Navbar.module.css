@@ -2,19 +2,40 @@
     position: fixed;
     width: 100vw;
     padding: 2rem 0;
+    /* background-color: #fff; */
+}
+.scroll{
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    z-index: 99;
 }
 .nav nav{
-    width: 120rem;
+    width: 88vw;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     /* background-color: antiquewhite; */
     align-items: center;
 }
+.nav2 a{
+    padding: 0.75rem 2rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-color: #fff;
+    color: #5964DF;
+    border-radius: 3px;
+    font-size: 1.5rem;
+}
+.scroll a{
+    background-color: #5964DF;
+    color: #fff;
+}
 .navelements{
     display: flex;
     color: #ffffffb0;
     gap: 3rem;
+}
+.scroll .navelements, .scroll h1{
+    color: #333 !important;
 }
 .nav1{
     display: flex;
@@ -31,4 +52,23 @@
 }
 .navel{
     font-size: 1.4rem;
+}
+.nav3{
+    display: none;
+}
+.menu{
+    font-size: 2.3rem;
+    color: #fff;
+}
+.scroll .menu{
+    color: #5964DF;
+}
+
+@media screen and (max-width:750px) {
+    .navelements{
+        display: none;
+    }
+    .nav3{
+        display: block;
+    }
 }
