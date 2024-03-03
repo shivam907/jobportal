@@ -13,7 +13,23 @@ export default function Home() {
   const [jobArray, setJobArray] = React.useState();
   const [loading, setLoading] = React.useState(true);
   const [location, setLocation] = React.useState([])
-  const search = () => {};
+  const [experience, setExperience] = React.useState([])
+  const [sloc, setSloc] = React.useState()
+  const [sexp, setSexp] = React.useState()
+  const [key, setKey] = React.useState()
+  const locationHandler=(e)=>{
+    setSloc(e.value)
+  }
+  const keywordHandler=(e)=>{
+    
+    setKey(e.target.value)
+  }
+  const experienceHandler=(e)=>{
+    setSexp(e.value)
+  }
+  const search = () => {
+    console.log(sloc, key, sexp)
+  };
   React.useEffect(() => {
     const jobs = async () => {
       const aa = await fetch("/api");
@@ -24,10 +40,12 @@ export default function Home() {
       let arr = [];
       let temp = [];
       let loc=[]
+      let exp=[]
       b.jobs.forEach((i) => {
         setLoading(true);
         temp.push(i);
         loc.push(i.location)
+        exp.push(i.experience)
         arr.push(
           <JobBox
             key={Math.random(1) * 1000}
@@ -45,7 +63,17 @@ export default function Home() {
           />
         );
       });
-      setLocation(loc)
+      let nloc= [...new Set(loc)].sort()
+      let nexp = [...new Set(exp)].sort()
+      let nnloc=[], nnexp=[]
+      nloc.forEach(nl=>{
+        nnloc.push({"label":nl, "value":nl})
+      })
+      nexp.forEach(nl=>{
+        nnexp.push({"label":nl, "value":nl})
+      })
+      setLocation(nnloc)
+      setExperience(nnexp)
       setJob(arr);
       setJobArray(temp);
       setLoading(false);
@@ -54,6 +82,7 @@ export default function Home() {
     jobs();
   }, []);
   console.log(location)
+  console.log(experience)
   return (
     <>
       <Navbar />
@@ -63,6 +92,7 @@ export default function Home() {
         <div className={classes.input}>
           <img src="./search.svg" alt="" />
           <input
+          onChange={keywordHandler}
             type="text"
             name=""
             id=""
@@ -71,14 +101,14 @@ export default function Home() {
         </div>
         <div className={classes.input}>
           <img src="./location.png" alt="" />
-          <SelectDropDown1 placeholder="Location"/>
+          <SelectDropDown1 data={location} onChange={locationHandler} placeholder="Location"/>
           {/* <input type="text" name="" id="" placeholder="Location" /> */}
         </div>
         <div className={classes.input}>
           <img src="./work.svg" alt="" />
-          <SelectDropDown1 placeholder="Experience"/>
+          <SelectDropDown1 data={experience} onChange={experienceHandler} placeholder="Experience"/>
         </div>
-        <Button1>Search</Button1>
+        <Button1 onSubmit={search}>Search</Button1>
       </div>
       {/* <div className={classes.text}>
           <input type="checkbox" name="" id="" />
