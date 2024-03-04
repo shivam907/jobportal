@@ -37,7 +37,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className={classes.respcol}>
-        <div className={classes.col2}>
+        <div className={classes.col4}>
           <h1>Company</h1>
           <ul>
             <a href="https://cgcassignments.com">
@@ -45,7 +45,7 @@ const Footer = () => {
             </a>
           </ul>
         </div>
-        <div className={classes.col2}>
+        <div className={classes.col4}>
           <h1>Resources</h1>
           <ul>
           <Link href="/">

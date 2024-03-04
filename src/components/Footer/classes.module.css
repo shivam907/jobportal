@@ -28,6 +28,15 @@
     color: #fff;
     font-size: 1.8rem;
 }
+.col4{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.col4 h1{
+    color: #fff;
+    font-size: 1.8rem;
+}
 .col1 p{
     color: #ffffffb0;
     font-size: 1.4rem;
@@ -56,6 +65,17 @@
     gap: 1rem;
 }
 .col2 li{
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #ffffffb0;
+}
+.col4 ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.col4 li{
     font-size: 1.4rem;
     font-weight: 300;
     color: #ffffffb0;
@@ -108,6 +128,8 @@
         display: flex;
         justify-content: space-between;
     }
-
+    .col2{
+        display: none;
+    }
 
 }
