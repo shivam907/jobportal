@@ -108,3 +108,14 @@
 .asbody a{
   text-decoration: none;
 }
+@media screen and (max-width: 750px) {
+  .manual{
+    width: 90vw;
+    margin-top: 15rem;
+  }
+  .jobbody{
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+  }
+}
