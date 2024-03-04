@@ -92,3 +92,22 @@
 .links{
     margin-top: 2rem;
 }
+.respcol{
+    display: none;
+}
+@media screen and (max-width: 750px) {
+    .footer{
+        width: 90vw;
+    }
+    .footer footer{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .respcol{
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+}

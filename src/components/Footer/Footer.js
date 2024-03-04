@@ -36,6 +36,33 @@ const Footer = () => {
           </Link>
           </ul>
         </div>
+        <div className={classes.respcol}>
+        <div className={classes.col2}>
+          <h1>Company</h1>
+          <ul>
+            <a href="https://cgcassignments.com">
+              <li>CGC Assgn</li>
+            </a>
+          </ul>
+        </div>
+        <div className={classes.col2}>
+          <h1>Resources</h1>
+          <ul>
+          <Link href="/">
+            <li>Home</li>
+          </Link>
+          <Link href="/companies">
+            <li>Companies</li>
+          </Link>
+          <Link href="/carrers">
+            <li>Carrers</li>
+          </Link>
+          <Link href="/register">
+            <li>Register</li>
+          </Link>
+          </ul>
+        </div>
+        </div>
         <div className={classes.col3}>
           <h1>Contact Info</h1>
           <a href="mailto:cgcassgn@gmail.com">
