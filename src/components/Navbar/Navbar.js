@@ -96,7 +96,7 @@ const Navbar = () => {
               <div className={classes.navel}>Carrers</div>
             </div>
             {login ? (
-              <div className={classes.logg}>
+              <div onClick={logoutclick} className={classes.logg}>
                 <p>Shivam</p>
                 <ArrowDropDownIcon />
               </div>
@@ -105,6 +105,10 @@ const Navbar = () => {
                 <a>Register</a>
               </div>
             )}
+          {logout && <div onClick={logoutfun} className={classes.lbox}>
+          <p>Logout</p>
+          <LogoutIcon/>
+        </div>}
           </div>
         </div>
       )}
