@@ -17,7 +17,7 @@
     /* background-color: antiquewhite; */
     align-items: center;
 }
-.nav2 a{
+.nav2 .reg{
     padding: 0.75rem 2rem;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     background-color: #fff;
@@ -25,7 +25,7 @@
     border-radius: 3px;
     font-size: 1.5rem;
 }
-.scroll a{
+.scroll .reg{
     background-color: #5964DF;
     color: #fff;
 }
@@ -80,6 +80,7 @@
 .logg p{
     font-size: 1.4rem;
     font-weight: 600;
+    cursor: pointer;
 }
 .logIcon{
     font-size: 2rem;
@@ -117,6 +118,10 @@
 .nav a{
     text-decoration: none;
     color: inherit;
+    background-color: none !important;
+}
+.logo{
+    width: 5rem;
 }
 @media screen and (max-width:750px) {
     .navelements{
@@ -139,9 +144,9 @@
         display: flex;
         flex-direction: column;
     }
-    .mobile .nav2 a{
-        background-color: #5964DF;
-        color: #fff;
+    .reg{
+        background-color: #5964DF !important;
+        color: #fff !important;
     }
     
 }

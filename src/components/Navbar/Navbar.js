@@ -53,7 +53,7 @@ const Navbar = () => {
       }`}
     >
       <nav>
-        <h1>LOGO</h1>
+        <img className={classes.logo} src="/toid.png" alt="" />
         <div className={classes.navelements}>
           <div className={classes.nav1}>
             <div className={classes.navel}>About</div>
@@ -75,7 +75,7 @@ const Navbar = () => {
           ) : (
             <Link href="/register">
             <div className={classes.nav2}>
-              <a>Register</a>
+              <a className={classes.reg}>Register</a>
             </div>
             </Link>
           )}
@@ -120,7 +120,7 @@ const Navbar = () => {
               <Link href="/register">
 
               <div className={classes.nav2}>
-                <a>Register</a>
+                <a className={classes.reg}>Register</a>
               </div>
               </Link>
             )}
