@@ -112,3 +112,20 @@
   font-size: 1.7rem !important;
   /* background: #d87d4a; */
 }
+@media screen and (max-width: 750px){
+    .body{
+        padding: 4rem 0;
+        height: 100vh;
+    }
+    .form{
+        width: 100vw;
+        padding: 0 2rem;
+        /* margin: 0 auto; */
+    }
+    .inputBox{
+        grid-template-columns: 1fr 1fr;
+    }
+    .jobc{
+        height: 100vh;
+    }
+}

@@ -353,3 +353,16 @@
 }.lkj{
   text-decoration: none;
 }
+
+@media screen and (max-width: 750px) {
+  .navBar{
+    display: none;
+  }
+  .body{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
