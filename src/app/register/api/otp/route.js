@@ -4,7 +4,7 @@ import User from "@/lib/models/User.model";
 import nodemailer from "nodemailer"
 const transporter = nodemailer.createTransport({
   service: "gmail",
-  port: 465,
+  port: 587,
   secure: true,
   auth: {
     user: "syncu907@gmail.com",
