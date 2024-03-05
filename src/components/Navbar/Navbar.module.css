@@ -114,6 +114,10 @@
     margin-top: 2rem;
     margin-left: 1.5rem;
 }
+.nav a{
+    text-decoration: none;
+    color: inherit;
+}
 @media screen and (max-width:750px) {
     .navelements{
         display: none;
@@ -135,4 +139,9 @@
         display: flex;
         flex-direction: column;
     }
+    .mobile .nav2 a{
+        background-color: #5964DF;
+        color: #fff;
+    }
+    
 }

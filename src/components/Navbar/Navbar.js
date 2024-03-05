@@ -3,6 +3,7 @@ import classes from "./Navbar.module.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from '@mui/icons-material/Close';
 import { userLogin } from "@/lib/actions";
+import Link from "next/link";
 import LogoutIcon from '@mui/icons-material/Logout';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 const Navbar = () => {
@@ -56,9 +57,15 @@ const Navbar = () => {
         <div className={classes.navelements}>
           <div className={classes.nav1}>
             <div className={classes.navel}>About</div>
+            <Link href="/companies">
             <div className={classes.navel}>Companies</div>
-            <div className={classes.navel}>Jobs</div>
+            </Link>
+            <Link href="https://cgcassignments.com">
+            <div className={classes.navel}>Notes</div>
+            </Link>
+            <Link href="/carrers">
             <div className={classes.navel}>Carrers</div>
+            </Link>
           </div>
           {login ? (
             <div onClick={logoutclick} className={classes.logg}>
@@ -66,9 +73,11 @@ const Navbar = () => {
               <ArrowDropDownIcon className={classes.logIcon} />
             </div>
           ) : (
+            <Link href="/register">
             <div className={classes.nav2}>
               <a>Register</a>
             </div>
+            </Link>
           )}
         </div>
         <div className={classes.nav3}>
@@ -91,10 +100,16 @@ const Navbar = () => {
         <div className={classes.mobile}>
           <div className={classes.mob}>
             <div className={classes.nav1}>
-              <div className={classes.navel}>About</div>
-              <div className={classes.navel}>Companies</div>
-              <div className={classes.navel}>Jobs</div>
-              <div className={classes.navel}>Carrers</div>
+              <div className={classes.navel}>About</div>            
+              <Link href="/companies">
+            <div className={classes.navel}>Companies</div>
+            </Link>
+            <Link href="https://cgcassignments.com">
+            <div className={classes.navel}>Notes</div>
+            </Link>
+            <Link href="/carrers">
+            <div className={classes.navel}>Carrers</div>
+            </Link>
             </div>
             {login ? (
               <div onClick={logoutclick} className={classes.logg}>
@@ -102,9 +117,12 @@ const Navbar = () => {
                 <ArrowDropDownIcon />
               </div>
             ) : (
+              <Link href="/register">
+
               <div className={classes.nav2}>
                 <a>Register</a>
               </div>
+              </Link>
             )}
           {logout && <div onClick={logoutfun} className={classes.lbox}>
           <p>Logout</p>
