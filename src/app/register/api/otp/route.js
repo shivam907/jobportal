@@ -18,13 +18,13 @@ const transporter = nodemailer.createTransport({
     subject: "Verification",
   };
   console.log("hjk")
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error){
-        console.log(error)
-        return false;
+  await transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.log(error);
+      return false;
     }
-    console.log(true)
-    return true
+    console.log(true);
+    return true;
   });
 };
 
