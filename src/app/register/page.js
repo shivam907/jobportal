@@ -3,10 +3,12 @@ import React from "react";
 import classes from "./page.module.css";
 import Input from "@/components/Input/Input";
 import Button1 from "@/components/Buttons/Button1";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const page = () => {
+  const router=useRouter()
   const [tooast, setToast] = React.useState(false);
   const [name, setName]=React.useState()
   const [email, setEmail]=React.useState()
@@ -117,6 +119,7 @@ const page = () => {
       toast.success("Registered Successfully", {
         className: classes.toast,
       });
+      router.push("/login")
     }
   };
   return (
