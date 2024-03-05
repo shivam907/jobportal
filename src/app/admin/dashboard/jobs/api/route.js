@@ -5,5 +5,6 @@ export async function GET() {
 //   console.log(data);
     connectToDB();
     const job=await Job.find();
-  return Response.json({ jobs: job });
+    const njob=job.reverse()
+  return Response.json({ jobs: njob });
 }
