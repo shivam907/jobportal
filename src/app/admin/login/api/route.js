@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken";
 export async function POST(req) {
   const data = await req.json();
   console.log(data);
-  if (data.user == "admin" && data.pass == "pass") {
+  if (data.user == "V7xY#pW6Q2s@" && data.pass == "3K$9mP#z8Q@X") {
   const encryptedSessionData = await jwt.sign({ loggedIn: true }, "secret", {expiresIn: "1d"})
   cookies().set('session', encryptedSessionData, {
     httpOnly: true,

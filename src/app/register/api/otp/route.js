@@ -15,7 +15,7 @@ const transporter = nodemailer.createTransport({
   const mailOptions = {
     from: "cgcassgn@gmail.com",
     to: sendTo,
-    text: emailContent,
+    html: emailContent,
     subject: "Verification",
   };
   console.log("hjk")
@@ -39,6 +39,6 @@ export async function POST(req) {
   }
   console.log(data);
   const otp =Math.floor(Math.random() * 900000) + 100000;
-  const res = await sendEmail(String(otp), data.email);
+  const res = await sendEmail(`OTP for Verification at Toid Jobs is <b>${otp}</b>`, data.email);
   return Response.json({ sent: res, otp: otp, exist:false });
 }
