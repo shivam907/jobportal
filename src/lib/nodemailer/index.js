@@ -2,19 +2,18 @@ import nodemailer from "nodemailer"
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "syncu907@gmail.com",
-    pass: 'rewo ulfd rhxu mcwp',
+    user: "cgcassgn@gmail.com",
+    pass: 'ekmr kfvk mxjy ifcx',
   },
 });
 
 export const sendEmail = async (emailContent, sendTo) => {
   const mailOptions = {
-    from: "syncu907@gmail.com",
+    from: "cgcassgn@gmail.com",
     to: sendTo,
     text: emailContent,
     subject: "Verification",
   };
-  console.log("hjk")
   transporter.sendMail(mailOptions, (error, info) => {
     if (error){
         console.log(error)

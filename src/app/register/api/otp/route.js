@@ -2,17 +2,18 @@
 import { cookies } from "next/headers";
 import User from "@/lib/models/User.model";
 import nodemailer from "nodemailer"
+import { connectToDB } from "@/lib/mongoose";
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "syncu907@gmail.com",
-    pass: 'rewo ulfd rhxu mcwp',
+    user: "cgcassgn@gmail.com",
+    pass: 'ekmr kfvk mxjy ifcx',
   },
 });
 
  const sendEmail = async (emailContent, sendTo) => {
   const mailOptions = {
-    from: "syncu907@gmail.com",
+    from: "cgcassgn@gmail.com",
     to: sendTo,
     text: emailContent,
     subject: "Verification",
@@ -29,8 +30,9 @@ const transporter = nodemailer.createTransport({
 };
 
 export async function POST(req) {
+  connectToDB()
   const data = await req.json();
-    const ifuser= await User.find({email: data.email});
+  const ifuser= await User.find({email: data.email});
   if(ifuser.length>0){
     console.log(ifuser)
     return Response.json({ exist: true });
