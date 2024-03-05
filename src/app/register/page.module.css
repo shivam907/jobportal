@@ -68,3 +68,18 @@
     display: flex;
     align-items: flex-end;
 }
+.head{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.head h2{
+    font-size: 1.2rem;
+    font-weight: 400;
+    align-self: flex-end;
+    color: #5964DF;
+    margin-top: 1rem;
+}
+.head a{
+    text-decoration: none;
+}
