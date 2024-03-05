@@ -3,9 +3,12 @@ import React from "react";
 import classes from "./page.module.css";
 import Input from "@/components/Input/Input";
 import Button1 from "@/components/Buttons/Button1";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const page = () => {
+  const router=useRouter()
   const [tooast, setToast] = React.useState(false);
   const [name, setName]=React.useState()
   const [email, setEmail]=React.useState()
@@ -116,74 +119,80 @@ const page = () => {
       toast.success("Registered Successfully", {
         className: classes.toast,
       });
+      router.push("/login")
     }
   };
   return (
     <>
-    <div className={classes.body}>
-      <div className={classes.register}>
-        <div className={classes.left}>
-          <img src="/bg.png" alt="" />
-        </div>
-        <div className={classes.right}>
-          <h1>Register</h1>
-          <div className={classes.inputs}>
-            <Input
-              label="Enter Name"
-              type="text"
-              onSubmit={nameHandler}
-              placeholder="John Doe"
-            />
-
-            <div className={classes.otp}>
-              <Input
-                label="Enter Email"
-                onSubmit={emailHandler}
-                type="email"
-                disabled={emailD}
-                placeholder="name@email.com"
-              />
-              <button
-                onClick={sendOtp}
-                disabled={btnD}
-                className={classes.otpbtn}
-              >
-                Send Otp
-              </button>
+      <div className={classes.body}>
+        <div className={classes.register}>
+          <div className={classes.left}>
+            <img src="/bg.png" alt="" />
+          </div>
+          <div className={classes.right}>
+            <div className={classes.head}>
+              <h1>Register</h1>
+              <Link href="/login">
+                <h2>Already Have an Account ? Login</h2>
+              </Link>
             </div>
+            <div className={classes.inputs}>
+              <Input
+                label="Enter Name"
+                type="text"
+                onSubmit={nameHandler}
+                placeholder="John Doe"
+              />
 
-            <Input
-              label="Enter OTP"
-              type="number"
-              onSubmit={otpHandler}
-              disabled={otpD}
-              placeholder="Enter 6 digit long Otp"
-            />
+              <div className={classes.otp}>
+                <Input
+                  label="Enter Email"
+                  onSubmit={emailHandler}
+                  type="email"
+                  disabled={emailD}
+                  placeholder="name@email.com"
+                />
+                <button
+                  onClick={sendOtp}
+                  disabled={btnD}
+                  className={classes.otpbtn}
+                >
+                  Send Otp
+                </button>
+              </div>
 
-            <Input
-              label="Enter College Name"
-              type="text"
-              onSubmit={collegeHandler}
-              placeholder="Chandigarh Engineering College"
-            />
-            <Input
-              label="Enter Password"
-              type="text"
-              onSubmit={passwordHandler}
-              placeholder="Alphanumeric and be 6 character long"
-            />
-            <Input
-              label="Confirm Password"
-              type="password"
-              onSubmit={cpasswordHandler}
-              placeholder="Alphanumeric and be 6 character long"
-            />
-            <Button1 onSubmit={formHandler}>Submit</Button1>
+              <Input
+                label="Enter OTP"
+                type="number"
+                onSubmit={otpHandler}
+                disabled={otpD}
+                placeholder="Enter 6 digit long Otp"
+              />
+
+              <Input
+                label="Enter College Name"
+                type="text"
+                onSubmit={collegeHandler}
+                placeholder="Chandigarh Engineering College"
+              />
+              <Input
+                label="Enter Password"
+                type="text"
+                onSubmit={passwordHandler}
+                placeholder="Alphanumeric and be 6 character long"
+              />
+              <Input
+                label="Confirm Password"
+                type="password"
+                onSubmit={cpasswordHandler}
+                placeholder="Alphanumeric and be 6 character long"
+              />
+              <Button1 onSubmit={formHandler}>Submit</Button1>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <ToastContainer/>
+      <ToastContainer />
     </>
   );
 };

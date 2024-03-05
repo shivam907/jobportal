@@ -226,4 +226,7 @@
     .box{
         width: 35rem;
     }
+    .edits{
+        right: 2rem;
+    }
 }

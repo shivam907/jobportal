@@ -21,6 +21,7 @@ export async function POST(req) {
   const tokenData = {
     id: ifuser._id,
     email: ifuser.email,
+    name: ifuser.name
   };
   const token = await jwt.sign(tokenData, "secret", { expiresIn: "10d" });
   const response = Response.json({

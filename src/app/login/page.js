@@ -7,6 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 import {userLogin} from "@/lib/actions"
 import { useRouter } from "next/navigation";
 import "react-toastify/dist/ReactToastify.css";
+import Link from "next/link";
 const page = () => {
   const router=useRouter()
   const [tooast, setToast] = React.useState(false);
@@ -80,8 +81,13 @@ const page = () => {
         <div className={classes.left}>
           <img src="/bg.png" alt="" />
         </div>
-        <div className={classes.right}>
-          <h1>Log In</h1>
+        <div className={classes.right}>            
+        <div className={classes.head}>
+              <h1>Register</h1>
+              <Link href="/login">
+                <h2>Create an Account</h2>
+              </Link>
+            </div>
           <div className={classes.inputs}>
               <Input
                 label="Enter Email"

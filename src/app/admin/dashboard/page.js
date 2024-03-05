@@ -87,7 +87,7 @@ const Dashboard = () => {
     });
     const ans=await res.json();
     setToast(true);    
-    toast.success("Successfully Added To Cart",{
+    toast.success("Job Successfully Posted",{
       className: classes.toast
     });
     }

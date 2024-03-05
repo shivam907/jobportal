@@ -5,7 +5,9 @@ import CardMembershipIcon from "@mui/icons-material/CardMembership";
 import PowerSettingsNewIcon from "@mui/icons-material/PowerSettingsNew";
 import ChatIcon from "@mui/icons-material/Chat";
 import classes from "./stylee.module.css";
+import CloseIcon from '@mui/icons-material/Close';
 import Link from "next/link";
+import MenuIcon from "@mui/icons-material/Menu";
 import { useRouter } from 'next/navigation'
 import {adminLogin} from "@/lib/actions"
 
@@ -14,6 +16,10 @@ import img from "./logo.png";
 const layout = ({ children }) => {
     const router=useRouter()
   const [display, setDisplay]=React.useState(false)
+  const [open, setOpen]=React.useState(false)
+  const openMenu = ()=>{
+    setOpen(open?false:true)
+  }
   React.useEffect(()=>{
     const fun=async ()=>{
     const data= await adminLogin()
@@ -101,7 +107,52 @@ const layout = ({ children }) => {
           </div>
         </div>
       </nav>
-      <div className={classes.body}>{children}</div>
+      <div className={classes.body}>
+      <div className={classes.mob}>
+        <MenuIcon onClick={openMenu} className={classes.icon}/>
+      </div>
+      {open && <div className={classes.menuOpen}>
+                <div className={classes.close}>
+                  <CloseIcon onClick={openMenu} className={classes.clos}/>
+                </div>
+                  <div className={classes.menuBox}>
+            <div className={classes.menuIn}>
+              <Link href="/admin/dashboard">
+                <div
+                  onClick={() =>{ menuHandler(0); setOpen(false)}}
+                  className={`${classes.menuFlex} ${
+                    menu === 0 ? classes.activ : ""
+                  }`}
+                >
+                  <DashboardIcon className={classes.iconSize} />
+                  <p className={classes.paraNav}>Dashboard</p>
+                </div>
+              </Link>
+              <Link href="/admin/dashboard/jobs">
+                <div
+                  onClick={() =>{ menuHandler(1); setOpen(false)}}
+                  className={`${classes.menuFlex} ${
+                    menu === 1 ? classes.activ : ""
+                  }`}
+                >
+                  <CardMembershipIcon className={classes.iconSize} />
+                  <p className={classes.paraNav}>All Jobs</p>
+                </div>
+              </Link>
+              <div
+                onClick={() => {menuHandler(2); setOpen(false)}}
+                className={`${classes.menuFlex} ${
+                  menu === 2 ? classes.activ : ""
+                }`}
+              >
+                <ChatIcon className={classes.iconSize} />
+                <p className={classes.paraNav}>Messages</p>
+              </div>
+            </div>
+          </div>
+      </div>}
+      {children}
+      </div>
     </div>}
     </>
   );

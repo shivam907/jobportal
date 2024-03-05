@@ -5,6 +5,7 @@ import JobBox from "@/components/Job/JobBox";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import React from "react";
+import Link from "next/link";
 import Hero from "@/components/Hero/Hero";
 export default function Home() {
   const [job, setJob] = React.useState();
@@ -89,6 +90,20 @@ export default function Home() {
           {/* <div className={classes.specific}>
           <h1>See Company Specific Job Posting</h1>
         </div> */}
+          <div className={classes.newBoxes}>
+            <div className={classes.box1}>
+              <h1>View Latest Job Openings of 88+ Companies</h1>
+              <Link href="/companies">
+              <div className={classes.btn3}>View Now</div>
+              </Link>
+            </div>
+            <div className={classes.box2}>
+              <h1>View Carrer Pages of 50+ Companies</h1>
+              <Link href="/carrers">
+              <div className={classes.btn3}>View Now</div>
+              </Link>
+            </div>
+          </div>
           <h1 className={classes.latest}>Latest Jobs</h1>
           <div className={classes.body}>
           {loading ? <Loader /> :filterData?.length>0?filterData :job}</div>

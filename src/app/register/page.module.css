@@ -68,3 +68,33 @@
     display: flex;
     align-items: flex-end;
 }
+.head{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.head h2{
+    font-size: 1.2rem;
+    font-weight: 400;
+    align-self: flex-end;
+    color: #5964DF;
+    margin-top: 1rem;
+}
+.head a{
+    text-decoration: none;
+}
+@media screen and (max-width: 750px) {
+    .register{
+        width: 100vw;
+        display: flex;
+        margin: 0 auto;
+    }
+    .left{
+        display: none;
+    }
+    .right{
+        width: 95%;
+        border-radius: 5px;
+        margin: 0 auto;
+    }
+}
