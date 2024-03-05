@@ -34,6 +34,7 @@ const Navbar = () => {
       const res=await userLogin();
       console.log(res);
       if(res.loggedIn){
+        setName(res.loggedIn.name)
         setLogin(true)
       }
       else{
@@ -61,7 +62,7 @@ const Navbar = () => {
           </div>
           {login ? (
             <div onClick={logoutclick} className={classes.logg}>
-              <p>Shivam</p>
+              <p>{name}</p>
               <ArrowDropDownIcon className={classes.logIcon} />
             </div>
           ) : (
@@ -97,7 +98,7 @@ const Navbar = () => {
             </div>
             {login ? (
               <div onClick={logoutclick} className={classes.logg}>
-                <p>Shivam</p>
+                <p>{name}</p>
                 <ArrowDropDownIcon />
               </div>
             ) : (
