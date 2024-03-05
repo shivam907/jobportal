@@ -13,7 +13,9 @@ export const adminLogin =  () => {
 };
 export const userLogin =  () => {
   const data = cookies().get("login");
-  if (!data) {
+  console.log("bc", data)
+  if (!data || data.value=='false') {
+    console.log("fuddu")
     return { loggedIn: false };
   }
   console.log(data.value);

@@ -17,6 +17,11 @@ const Navbar = () => {
   const logoutclick=()=>{
     setLogout(logout?false:true)
   }
+  const logoutfun=async()=>{
+    setLogout(false)
+    setLogin(false)
+    await fetch("/api/logout")
+  }
   const nav = React.useRef(null);
   React.useEffect(()=>{
     const resizeHeaderOnScroll = () => {
@@ -32,7 +37,7 @@ const Navbar = () => {
         setLogin(true)
       }
       else{
-        setActive(true)
+        setLogin(false)
       }
     }
     fun();
@@ -74,7 +79,7 @@ const Navbar = () => {
         </div>
             {logout && <div className={classes.logout}>
       <div className={classes.logbox}>
-        <div className={classes.lbox}>
+        <div onClick={logoutfun} className={classes.lbox}>
           <p>Logout</p>
           <LogoutIcon/>
         </div>
