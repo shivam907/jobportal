@@ -2,6 +2,7 @@
 import { cookies } from "next/headers";
 import jwt from "jsonwebtoken";
 export const adminLogin =  () => {
+  try{
   const data = cookies().get("session");
   if (!data) {
     return { loggedIn: false };
@@ -10,6 +11,10 @@ export const adminLogin =  () => {
   const decodedToken = jwt.verify(data.value, "secret");
   console.log("iol", decodedToken);
   return { loggedIn: decodedToken.loggedIn };
+}
+catch(e){
+return { loggedIn: false };
+}
 };
 export const userLogin =  () => {
   const data = cookies().get("login");

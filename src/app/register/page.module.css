@@ -83,3 +83,18 @@
 .head a{
     text-decoration: none;
 }
+@media screen and (max-width: 750px) {
+    .register{
+        width: 100vw;
+        display: flex;
+        margin: 0 auto;
+    }
+    .left{
+        display: none;
+    }
+    .right{
+        width: 95%;
+        border-radius: 5px;
+        margin: 0 auto;
+    }
+}
