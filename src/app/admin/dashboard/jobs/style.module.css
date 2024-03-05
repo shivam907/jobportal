@@ -103,3 +103,8 @@
     flex-direction: column;
     gap: 2rem;
 }
+@media screen and (max-width: 750px) {
+    .jobc{
+        height: 100vh;
+    }
+}

@@ -109,7 +109,7 @@ const JobBox = (props) => {
     // if(months.indexOf(months[parseInt(d.getMonth()+1)])-months.indexOf(months[parseInt(newDate.getMonth()+1)])>=6) return null;
   // }
   const deleteJob = async () => {
-    const a = await fetch("http://localhost:4000/api/delete", {
+    const a = await fetch("/api/jobs/delete", {
       method: "POST",
       credentials: "include",
       headers: { "Content-Type": "application/json" },
@@ -137,9 +137,9 @@ const JobBox = (props) => {
     <div key={Math.random(1) * 1000} className={classes.box}>
       {props.edit && (
         <div className={classes.edits}>
-          <div className={classes.editIcon}>
+          {/* <div className={classes.editIcon}>
             <EditIcon className={classes.iconn} />
-          </div>
+          </div> */}
           <div onClick={deleteJob} className={classes.deleteIcon}>
             <DeleteIcon className={classes.iconn} />
           </div>
