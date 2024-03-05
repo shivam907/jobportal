@@ -38,7 +38,59 @@
   padding: 5rem 3rem;
   /* background-color: #87cefa; */
 }
-
+.newBoxes{
+  width: 120rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.box1, .box2{
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  gap: 3rem;
+  border: 1px solid #00000020;
+  border-radius: 1rem;
+}
+.newBoxes h1{
+  font-size: 2rem;
+  font-weight: 500;
+  align-self: center;
+}
+.btn3{
+  padding: 1rem 3rem;
+  font-size: 1.6rem;
+  background-color:#5964DF ;
+  border-radius: 5rem;
+  align-self: center;
+  color: #fff;
+}
+.box1{
+  background-color: #fff;
+}
+.box2{
+  background-color: #5964DF;
+}
+.box2 h1{
+  color: #fff;
+}
+.box2 .btn3{
+  background-color: #fff;
+  color: #5964DF;
+}
+.btn3:hover{
+  cursor: pointer;
+  background-color: #404ccf;
+}
+.box2 .btn3:hover{
+  background-color: #f1f1f1;
+}
+.newBoxes a{
+  align-self: center;
+  text-decoration: none;
+  /* color: in; */
+}
 @media screen and (max-width:750px) {
   .manual{
     width: 95vw;
