@@ -9,6 +9,7 @@
 
 .box{
     width: 25rem;
+    height: 15rem;
     background-color: #fff;
     padding: 2rem;
     border-radius: 0.75rem;
@@ -117,3 +118,25 @@
         gap: 2rem;
         align-items: center;
     }
+
+@media screen and (max-width: 750px) {
+    .body{
+        width: 100vw;
+        gap: 1rem;
+        margin-top: 15rem;
+    }
+    .box{
+        width: 10rem;
+        height: 10rem;
+    }
+    .img{
+        width: 7rem;
+    }
+    .arrow{
+        display: none;
+    }
+    .name h1{
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}
