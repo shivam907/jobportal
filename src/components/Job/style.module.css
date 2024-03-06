@@ -224,7 +224,7 @@
 
 @media screen and (max-width: 750px){
     .box{
-        width: 35rem;
+        width: 90vw;
     }
     .edits{
         right: 2rem;
