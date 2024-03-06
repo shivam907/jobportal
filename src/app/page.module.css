@@ -93,7 +93,7 @@
 }
 @media screen and (max-width:750px) {
   .manual{
-    width: 95vw;
+    width: 90vw;
     padding-top: 5rem;
   }
   .body{
@@ -103,5 +103,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+  .newBoxes{
+    width: 90vw;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
   }
 }
