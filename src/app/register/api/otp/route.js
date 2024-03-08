@@ -2,6 +2,7 @@
 import { cookies } from "next/headers";
 import User from "@/lib/models/User.model";
 import nodemailer from "nodemailer"
+import { connectToDB } from "@/lib/mongoose";
 const transporter = nodemailer.createTransport({
   service: "gmail",
   port: 465,
@@ -32,6 +33,7 @@ const transporter = nodemailer.createTransport({
 
 export async function POST(req) {
   const data = await req.json();
+  connectToDB()
     const ifuser= await User.find({email: data.email});
   if(ifuser.length>0){
     console.log(ifuser)

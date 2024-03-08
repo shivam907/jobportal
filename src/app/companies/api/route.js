@@ -6,7 +6,11 @@ export async function POST(req) {
     const url=ur.url
   console.log(url)
   try {
-    const chrome = await puppeteer.launch();
+    const chrome = await puppeteer.launch({headless: true,
+args: [
+'--no-sandbox',
+'--disable-setuid-sandbox',
+],});
     const page = await chrome.newPage();
     await page.setUserAgent(
       'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36'
