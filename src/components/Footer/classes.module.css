@@ -115,6 +115,9 @@
 .respcol{
     display: none;
 }
+.logo{
+    width: 8rem;
+}
 @media screen and (max-width: 750px) {
     .footer{
         width: 90vw;
