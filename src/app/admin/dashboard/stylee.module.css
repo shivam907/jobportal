@@ -356,6 +356,9 @@
 .mob{
   display: none;
 }
+.toast{
+  font-size: 1.6rem;
+}
 @media screen and (max-width: 750px) {
   .navBar{
     display: none;
