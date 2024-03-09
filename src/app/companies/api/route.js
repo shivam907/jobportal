@@ -4,7 +4,7 @@ import puppeteer from "puppeteer";
 export async function POST(req) {
     const  ur  = await req.json();
     const url=ur.url
-  console.log(url)
+  console.log("url",url)
   try {
     const chrome = await puppeteer.launch({headless: true,
 args: [

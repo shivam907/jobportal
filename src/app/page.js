@@ -87,9 +87,6 @@ export default function Home() {
       <main className={classes.main}>
     <Hero jobArray={jobArray} setFilterData={setFilterData} location={location} experience={experience} />
         <section className={classes.manual}>
-          {/* <div className={classes.specific}>
-          <h1>See Company Specific Job Posting</h1>
-        </div> */}
           <div className={classes.newBoxes}>
             <div className={classes.box1}>
               <h1>View Latest Job Openings of 88+ Companies</h1>
