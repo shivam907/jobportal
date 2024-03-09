@@ -54,8 +54,7 @@ export const scraper = async (url) => {
 export const scrap = async () => {
   const allJobs = {};
   let keys = Object.keys(data.data);
-  const maxConcurrency = 5; // Limit concurrency to 5
-
+  const maxConcurrency = 5; 
   for (let j = 0; j < keys.length; j++) {
     const job = keys[j];
     if (data.data[job].includes("naukri")) {
@@ -78,10 +77,8 @@ export const scrap = async () => {
       });
       allJobs[job] = arr;
     }
-
-    // Limit concurrency
     if ((j + 1) % maxConcurrency === 0) {
-      await new Promise((resolve) => setTimeout(resolve, 5000)); // Wait for 5 seconds before starting the next batch
+      await new Promise((resolve) => setTimeout(resolve, 5000)); 
     }
   }
 
