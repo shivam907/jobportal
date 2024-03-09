@@ -25,13 +25,15 @@ const layout = ({ children }) => {
   const openMenu = () => {
     setOpen(open ? false : true);
   };
-  const scrap = () => {
+  const scrapClick =async () => {
     if(!window.location.href.includes("localhost")){
         return toast.error("You are Not on Localhost",{
       className: classes.toast
     });
   }
   setScraping(true)
+  await scrap()
+  setScraping(false)
   };
   React.useEffect(() => {
     console.log(window.location.href)
@@ -107,7 +109,7 @@ const layout = ({ children }) => {
                     <ChatIcon className={classes.iconSize} />
                     <p className={classes.paraNav}>Messages</p>
                   </div>
-                  <div onClick={scrap} className={`${classes.menuFlex}`}>
+                  <div onClick={scrapClick} className={`${classes.menuFlex}`}>
                     {scraping?<Loading/>:<PlayArrowIcon className={classes.iconSize} />}
                     <p className={classes.paraNav}>Scrap</p>
                   </div>
