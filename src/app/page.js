@@ -7,7 +7,6 @@ import Footer from "@/components/Footer/Footer";
 import React from "react";
 import Link from "next/link";
 import Hero from "@/components/Hero/Hero";
-import { scrap } from "@/lib/scraper";
 export default function Home() {
   const [job, setJob] = React.useState();
   const [jobArray, setJobArray] = React.useState();
@@ -18,7 +17,6 @@ export default function Home() {
 
   React.useEffect(() => {
     const jobs = async () => {
-      console.log(await scrap())
       const aa = await fetch("/api");
       const bb = await aa.json();
       console.log(bb);
