@@ -7,6 +7,7 @@ import Footer from "@/components/Footer/Footer";
 import React from "react";
 import Link from "next/link";
 import Hero from "@/components/Hero/Hero";
+import { scrap } from "@/lib/scraper";
 export default function Home() {
   const [job, setJob] = React.useState();
   const [jobArray, setJobArray] = React.useState();
@@ -17,6 +18,7 @@ export default function Home() {
 
   React.useEffect(() => {
     const jobs = async () => {
+      console.log(await scrap())
       const aa = await fetch("/api");
       const bb = await aa.json();
       console.log(bb);
@@ -87,9 +89,6 @@ export default function Home() {
       <main className={classes.main}>
     <Hero jobArray={jobArray} setFilterData={setFilterData} location={location} experience={experience} />
         <section className={classes.manual}>
-          {/* <div className={classes.specific}>
-          <h1>See Company Specific Job Posting</h1>
-        </div> */}
           <div className={classes.newBoxes}>
             <div className={classes.box1}>
               <h1>View Latest Job Openings of 88+ Companies</h1>
