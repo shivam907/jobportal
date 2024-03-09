@@ -14,22 +14,24 @@ import { adminLogin } from "@/lib/actions";
 import { scrap } from "@/lib/scraper";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import Loading from "@/components/Loader/Loading";
 import img from "./logo.png";
 // import { cookies } from "next/headers";
 const layout = ({ children }) => {
   const router = useRouter();
   const [display, setDisplay] = React.useState(false);
   const [open, setOpen] = React.useState(false);
+  const [scraping, setScraping] = React.useState(false)
   const openMenu = () => {
     setOpen(open ? false : true);
   };
   const scrap = () => {
     if(!window.location.href.includes("localhost")){
-        toast.error("You are Not on Localhost",{
+        return toast.error("You are Not on Localhost",{
       className: classes.toast
     });
-    }
+  }
+  setScraping(true)
   };
   React.useEffect(() => {
     console.log(window.location.href)
@@ -106,7 +108,7 @@ const layout = ({ children }) => {
                     <p className={classes.paraNav}>Messages</p>
                   </div>
                   <div onClick={scrap} className={`${classes.menuFlex}`}>
-                    <PlayArrowIcon className={classes.iconSize} />
+                    {scraping?<Loading/>:<PlayArrowIcon className={classes.iconSize} />}
                     <p className={classes.paraNav}>Scrap</p>
                   </div>
                 </div>
