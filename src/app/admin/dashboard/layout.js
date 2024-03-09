@@ -5,6 +5,7 @@ import CardMembershipIcon from "@mui/icons-material/CardMembership";
 import PowerSettingsNewIcon from "@mui/icons-material/PowerSettingsNew";
 import ChatIcon from "@mui/icons-material/Chat";
 import classes from "./stylee.module.css";
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import CloseIcon from '@mui/icons-material/Close';
 import Link from "next/link";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -19,6 +20,9 @@ const layout = ({ children }) => {
   const [open, setOpen]=React.useState(false)
   const openMenu = ()=>{
     setOpen(open?false:true)
+  }
+  const scrap=()=>{
+    
   }
   React.useEffect(()=>{
     const fun=async ()=>{
@@ -92,6 +96,13 @@ const layout = ({ children }) => {
                 <ChatIcon className={classes.iconSize} />
                 <p className={classes.paraNav}>Messages</p>
               </div>
+                            <div
+                onClick={scrap}
+                className={`${classes.menuFlex}`}
+              >
+                <PlayArrowIcon className={classes.iconSize} />
+                <p className={classes.paraNav}>Scrap</p>
+              </div>
             </div>
           </div>
         </div>
@@ -147,6 +158,15 @@ const layout = ({ children }) => {
               >
                 <ChatIcon className={classes.iconSize} />
                 <p className={classes.paraNav}>Messages</p>
+              </div>
+              <div
+                onClick={() => {menuHandler(2); setOpen(false)}}
+                className={`${classes.menuFlex} ${
+                  menu === 2 ? classes.activ : ""
+                }`}
+              >
+                <PlayArrowIcon className={classes.iconSize} />
+                <p className={classes.paraNav}>Scrap</p>
               </div>
             </div>
           </div>
