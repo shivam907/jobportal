@@ -6,7 +6,7 @@ const Footer = () => {
     <div className={classes.footer}>
       <footer>
         <div className={classes.col1}>
-          <h1>LOGO</h1>
+          <img className={classes.logo} src="/toid.png"/>
           <p>
             Unlock your potential and seize the opportunity to thrive. Join us as we embark on a journey of growth and innovation together.
           </p>
