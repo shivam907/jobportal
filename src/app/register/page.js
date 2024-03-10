@@ -43,6 +43,9 @@ const page = () => {
       setOtpD(false);
       setBtnD(true);
       setEmailD(true);
+        return toast.success("OTP Sent to the Mail", {
+          className: classes.toast,
+        });
     }
   };
   const nameHandler=(e)=>{
