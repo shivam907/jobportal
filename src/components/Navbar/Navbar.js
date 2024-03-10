@@ -53,7 +53,9 @@ const Navbar = () => {
       }`}
     >
       <nav>
+      <Link href="/">
         <img className={classes.logo} src="/toid.png" alt="" />
+      </Link>
         <div className={classes.navelements}>
           <div className={classes.nav1}>
             <div className={classes.navel}>About</div>
