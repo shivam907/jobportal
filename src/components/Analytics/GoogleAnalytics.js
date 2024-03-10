@@ -14,7 +14,15 @@ const GoogleAnalytics = ({ ga_id }) => (
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-
+            gtag('consent', 'update', {
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted',
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted'
+        });    
+        gtag('consent', 'update', {
+      'ad_storage': 'granted'
+    });
           gtag('config', '${ga_id}');
         `,
       }}
