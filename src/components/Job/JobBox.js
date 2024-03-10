@@ -202,9 +202,11 @@ const JobBox = (props) => {
           </div>
         )}
       </div>
+      {props.scraped && 
       <div className={classes.column}>
         <p className={classes.para}>{props.description}</p>
       </div>
+      }
       <div className={classes.footer}>
         <div className={classes.date}>
           <h1>Posted:</h1>
