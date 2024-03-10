@@ -58,7 +58,7 @@ const Navbar = () => {
       </Link>
         <div className={classes.navelements}>
           <div className={classes.nav1}>
-            <div className={classes.navel}>About</div>
+            {/* <div className={classes.navel}>About</div> */}
             <Link href="/companies">
             <div className={classes.navel}>Companies</div>
             </Link>
