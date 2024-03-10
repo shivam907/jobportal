@@ -84,7 +84,7 @@ const page = () => {
         <div className={classes.right}>            
         <div className={classes.head}>
               <h1>Register</h1>
-              <Link href="/login">
+              <Link href="/register">
                 <h2>Create an Account</h2>
               </Link>
             </div>
