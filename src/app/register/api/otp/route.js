@@ -5,17 +5,17 @@ import nodemailer from "nodemailer"
 import { connectToDB } from "@/lib/mongoose";
 const transporter = nodemailer.createTransport({
   service: "gmail",
-  port: 465,
-  secure: false,
+  // port: 465,
+  secure: true,
   auth: {
-    user: "syncu907@gmail.com",
-    pass: 'rewo ulfd rhxu mcwp',
+    user: "toidverify@gmail.com",
+    pass: "tamp jrzy rqdx xzez",
   },
 });
 
  const sendEmail = async (emailContent, sendTo) => {
   const mailOptions = {
-    from: "syncu907@gmail.com",
+    from: "toidverify@gmail.com",
     to: sendTo,
     html: emailContent,
     subject: "Verification",
