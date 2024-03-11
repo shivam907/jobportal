@@ -15,7 +15,6 @@ import "react-toastify/dist/ReactToastify.css";
 const JobBox = (props) => {
   const router=useRouter()
   function extractDate(inputString) {
-    console.log("dd", inputString)
     if(inputString.includes('30+')){
       return `30+ Days Ago`
     }
@@ -121,9 +120,7 @@ const JobBox = (props) => {
   };
   const apply = async ()=>{
     const res= await userLogin()
-    console.log("res",res)
     if(res.loggedIn){
-      console.log(props.link)
       router.push(props.link)
     }
     else{

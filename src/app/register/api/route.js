@@ -5,8 +5,7 @@ import { connectToDB } from "@/lib/mongoose";
 import bcryptjs from "bcryptjs";
 export async function POST(req) {
   const data = await req.json();
-  connectToDB()
-  console.log(data);
+  connectToDB();
   const ifuser= await User.find({email: data.email});
   if(ifuser.length>0){
     return Response.json({ exist: true });

@@ -6,8 +6,6 @@ export async function GET(req) {
   if(!data){
     return Response.json({ loggedIn: false });
   }
-  console.log(data.value)
   const decodedToken = jwt.verify(data.value, 'secret');
-  console.log("iol",decodedToken);
   return Response.json({ loggedIn: true });
 }

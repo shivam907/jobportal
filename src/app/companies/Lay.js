@@ -1,24 +1,22 @@
-'use client';
+"use client";
 import classes from "./page.module.css";
 import Button1 from "@/components/Buttons/Button1";
 import data from "@/data/company.json";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import Link from "next/link";
 import Hero from "@/components/Hero/Hero";
 
-import { usePathname } from 'next/navigation'
+import { usePathname } from "next/navigation";
 import React from "react";
 const Lay = (props) => {
-
   const [sideBar, setSideBar] = React.useState();
   const [menu, setMenu] = React.useState(0);
-  const pathname = usePathname()
+  const pathname = usePathname();
   React.useEffect(() => {
-    const currUrl = pathname.slice(11, pathname.length)
+    const currUrl = pathname.slice(11, pathname.length);
     const keys = Object.keys(data.data).sort();
-    console.log(keys.length)
     const groupedData = keys.reduce((acc, curr) => {
       const firstChar = curr[0].toLowerCase();
       if (!acc[firstChar]) {
@@ -28,28 +26,38 @@ const Lay = (props) => {
       }
       return acc;
     }, {});
-    console.log(Object.keys(groupedData).length);
     let arr = [];
-    let curr=0;
+    let curr = 0;
     Object.keys(groupedData).forEach((i) => {
       let temp = [];
       groupedData[i].forEach((j) => {
         temp.push(
-        <Link key={Math.random()} href={`/companies/${j.split(" ").join("")}`}>
-          <div key={Math.random()} onClick={()=>setMenu(j.split(" ").join(""))} className={`${classes.assbox} ${j.split(" ").join("")==currUrl?classes.asactive:""}`}>
-            <p>{j}</p>
-            <KeyboardArrowRightIcon />
-          </div>
-        </Link>
+          <Link
+            key={Math.random()}
+            href={`/companies/${j.split(" ").join("")}`}
+          >
+            <div
+              key={Math.random()}
+              onClick={() => setMenu(j.split(" ").join(""))}
+              className={`${classes.assbox} ${
+                j.split(" ").join("") == currUrl ? classes.asactive : ""
+              }`}
+            >
+              <p>{j}</p>
+              <KeyboardArrowRightIcon />
+            </div>
+          </Link>
         );
-        curr+=1;
+        curr += 1;
       });
       arr.push(
         <div key={Math.random()} className={classes.asbox}>
           <div className={classes.ashead}>
             <h1>{i}</h1>
           </div>
-          <div key={Math.random()} className={classes.asbody}>{temp}</div>
+          <div key={Math.random()} className={classes.asbody}>
+            {temp}
+          </div>
         </div>
       );
     });
@@ -59,7 +67,12 @@ const Lay = (props) => {
     <>
       <Navbar />
       <main className={classes.main}>
-        <Hero jobArray={props.jobArray} setFilterData={props.setFilterData} location={props.location} experience={props.experience} />
+        <Hero
+          jobArray={props.jobArray}
+          setFilterData={props.setFilterData}
+          location={props.location}
+          experience={props.experience}
+        />
         <section className={classes.manual}>
           <div className={classes.jobbody}>
             <aside className={classes.aside}>{sideBar}</aside>
@@ -72,6 +85,6 @@ const Lay = (props) => {
       <Footer />
     </>
   );
-}
+};
 export default Lay;
 // 6315;

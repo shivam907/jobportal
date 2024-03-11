@@ -16,7 +16,6 @@ export const sendEmail = async (emailContent, sendTo) => {
   };
   transporter.sendMail(mailOptions, (error, info) => {
     if (error){
-        console.log(error)
         return false;
     }
     return true

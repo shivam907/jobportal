@@ -19,7 +19,6 @@ export default function Home() {
     const jobs = async () => {
       const aa = await fetch("/api");
       const bb = await aa.json();
-      console.log(bb);
       const a = await fetch("/admin/dashboard/jobs/api");
       const b = await a.json();
       let arr = [];
@@ -76,12 +75,9 @@ export default function Home() {
       setJob(arr);
       setJobArray(temp);
       setLoading(false);
-      // console.log(job)
     };
     jobs();
   }, []);
-  console.log(location);
-  console.log(experience);
   return (
     <>
       <Navbar />

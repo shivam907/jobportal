@@ -28,7 +28,6 @@ const page = () => {
     });
 
     setCompany(arr);
-    console.log(data.length);
   }, []);
   return (
     <>
