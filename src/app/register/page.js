@@ -24,7 +24,6 @@ const page = () => {
     setToast(false);
   }, []);
   const sendOtp = async () => {
-    console.log("ys");
     if (email.includes("@") && email.includes(".")) {
       const a = await fetch("/register/api/otp", {
         method: "POST",
@@ -34,7 +33,6 @@ const page = () => {
       });
       const b = await a.json();
       if (b.exist) {
-        console.log("yes")
         return toast.error("Email Already Exist", {
           className: classes.toast,
         });
@@ -67,7 +65,6 @@ const page = () => {
     setCPassword(e.target.value)
   }
   const formHandler = async () => {
-    console.log("hjk");
     if (!name || name?.length < 2) {
       return toast.error("Please enter your name", {
         className: classes.toast,
@@ -103,7 +100,6 @@ const page = () => {
         className: classes.toast,
       });
     }
-    console.log("bc")
     const a = await fetch("/register/api", {
       method: "POST",
       body: JSON.stringify({

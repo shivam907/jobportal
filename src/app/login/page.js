@@ -17,7 +17,6 @@ const page = () => {
   React.useEffect(() => {
     const fun=async()=>{
       const res=await userLogin();
-      console.log(res);
       if(res.loggedIn){
         router.push("/")
       }
@@ -37,7 +36,6 @@ const page = () => {
   }
 
   const formHandler = async () => {
-    console.log("hjk");
     if (
       !email ||
       email?.length < 4 ||
@@ -53,7 +51,6 @@ const page = () => {
         className: classes.toast,
       });
     }
-    console.log("bc")
     const a = await fetch("/login/api", {
       method: "POST",
       body: JSON.stringify({

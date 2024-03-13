@@ -34,7 +34,6 @@ const Navbar = () => {
     window.addEventListener("scroll", resizeHeaderOnScroll);
     const fun = async () => {
       const res = await userLogin();
-      console.log(res);
       if (res.loggedIn) {
         setName(res.loggedIn.name);
         setLogin(true);

@@ -18,7 +18,6 @@ const Hero = (props) => {
   };
   const search = () => {
     let filter = [];
-    console.log(sloc, key, sexp);
     props.jobArray.forEach((i) => {
       let keywordMatch;
       if (key) {
@@ -61,7 +60,6 @@ const Hero = (props) => {
       }
     });
     props.setFilterData(filter);
-    console.log(filter);
   };
   return (
     <div className={classes.hero}>

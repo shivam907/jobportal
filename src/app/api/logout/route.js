@@ -1,8 +1,7 @@
 "use server";
 import { cookies } from "next/headers";
 export async function GET() {
-cookies().delete("login")
-console.log("logout")
+cookies().delete("login");
   return Response.json({
     loggedOut: true,
   });

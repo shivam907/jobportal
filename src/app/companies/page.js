@@ -20,7 +20,6 @@ export default function Home() {
       let exp=[]
       b.jobs.forEach((i) => {
         setLoading(true)
-        console.log(i)
         temp.push(i);
         loc.push(i.location)
         exp.push(i.experience)

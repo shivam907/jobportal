@@ -4,7 +4,6 @@ const fs= require("fs")
 import * as cheerio from "cheerio";
 import puppeteer from "puppeteer";
 export const scraper = async (url) => {
-  console.log("url", url);
   try {
     const chrome = await puppeteer.launch();
     const page = await chrome.newPage();
@@ -13,7 +12,6 @@ export const scraper = async (url) => {
     );
 
     const response = await page.goto(url);
-    console.log(response);
     if (!response || !response.ok()) {
       throw new Error(
         `Failed to fetch ${url}. Status: ${
@@ -27,11 +25,9 @@ export const scraper = async (url) => {
     const body = await page.evaluate(() => {
       return document.querySelector("body")?.innerHTML || "";
     });
-    // console.log(body)
     const $ = cheerio.load(body);
     const data = [];
     $("article").each((_idx, el) => {
-      console.log(_idx);
       data.push({
         title: $(el).find(".title").text(),
         applyLink: $(el).find(".title").attr("href") || "",
@@ -47,7 +43,6 @@ export const scraper = async (url) => {
 
     return { success: true, data };
   } catch (error) {
-    console.error("Error in API:", error.message);
     return { success: false, error: error.message };
   }
 };
@@ -58,7 +53,6 @@ export const scrap = async () => {
   for (let j = 0; j < keys.length; j++) {
     const job = keys[j];
     if (data.data[job].includes("naukri")) {
-      console.log(data.data[job]);
       const dat = await scraper(data.data[job]);
       let arr = [];
       dat.data.forEach((i) => {
@@ -82,11 +76,8 @@ export const scrap = async () => {
     }
   }
 
-  // console.log(allJobs);
-  console.log(process.cwd())
   await fs.writeFileSync("./src/data/scrap.json",JSON.stringify(allJobs), (err) => {
         if (err) throw err;
-        console.log('The file has been saved!', 'cases');
     });
   return allJobs;
 };

@@ -154,7 +154,6 @@ const Page = (props) => {
       const { result, jobArray, experience, location } =
         await memoizedFetchData(props.params.company);
       setJobs(result);
-      console.log(result, experience);
       setJobArray(jobArray);
       setExperience(experience);
       setLocation(location);
