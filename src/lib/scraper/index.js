@@ -52,8 +52,10 @@ export const scrap = async () => {
   const maxConcurrency = 5; 
   for (let j = 0; j < keys.length; j++) {
     const job = keys[j];
+    console.log(keys[j])
     if (data.data[job].includes("naukri")) {
       const dat = await scraper(data.data[job]);
+      console.log(dat)
       let arr = [];
       dat.data.forEach((i) => {
         arr.push({
