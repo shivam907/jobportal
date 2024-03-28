@@ -19,7 +19,7 @@ export default function Home() {
     const jobs = async () => {
       const aa = await fetch("/api");
       const bb = await aa.json();
-      const a = await fetch("/admin/dashboard/jobs/api");
+      const a = await fetch("/admin/dashboard/jobs/api", { cache: 'no-store' });
       const b = await a.json();
       let arr = [];
       let temp = [];
