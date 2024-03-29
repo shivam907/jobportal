@@ -6,6 +6,6 @@ export async function POST(req) {
     const data = await req.json();
     connectToDB();
     const job = await Job.deleteOne({ _id: data.id });
-    await job.save()
+    // await job.save()
     return Response.json({ deleted: true });
 }

@@ -160,9 +160,12 @@
 .deleteIcon{
     padding: 0.7rem;
     border-radius: 5px;
+    cursor: pointer;
     background-color: #ff000036;
 }
-
+.deleteIcon:hover{
+    background-color: #ff000056;
+}
 .deleteIcon .iconn{
     fill: red !important;
 }

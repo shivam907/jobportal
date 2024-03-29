@@ -117,6 +117,7 @@ const JobBox = (props) => {
       }),
     });
     await a.json();
+    props.render()
   };
   const apply = async ()=>{
     const res= await userLogin()
