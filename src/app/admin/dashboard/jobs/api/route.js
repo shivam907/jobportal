@@ -6,5 +6,6 @@ export async function GET() {
     connectToDB();
     const job=await Job.find();
     const njob=job.reverse()
+    // Response.setHeader;
   return Response.json({ jobs: njob });
 }

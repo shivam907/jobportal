@@ -7,6 +7,8 @@ import Footer from "@/components/Footer/Footer";
 import React from "react";
 import Link from "next/link";
 import Hero from "@/components/Hero/Hero";
+import axios from 'axios';
+
 export default function Home() {
   const [job, setJob] = React.useState();
   const [jobArray, setJobArray] = React.useState();
@@ -17,67 +19,72 @@ export default function Home() {
 
   React.useEffect(() => {
     const jobs = async () => {
-      const aa = await fetch("/api");
-      const bb = await aa.json();
-      const a = await fetch("/admin/dashboard/jobs/api", { cache: 'no-store' });
-      const b = await a.json();
-      let arr = [];
-      let temp = [];
-      let loc = [];
-      let exp = [];
-      b.jobs.forEach((i) => {
-        setLoading(true);
-        temp.push({
-          key: Math.random(1) * 1000,
-          id: i._id,
-          date: i.createdAt,
-          jobName: i.role,
-          companyName: i.companyName,
-          experience: i.experience,
-          salary: i.package,
-          degree: i.degree,
-          location: i.location,
-          role: i.type,
-          description: i.description?.slice(0, 100),
-          link: i.link,
+      try {
+        const aa = await axios.get("/api");
+        const bb = aa.data;
+        const a = await axios.get("/admin/dashboard/jobs/api", { headers: { 'Cache-Control': 'no-store' } });
+        const b = a.data;
+        let arr = [];
+        let temp = [];
+        let loc = [];
+        let exp = [];
+        b.jobs.forEach((i) => {
+          setLoading(true);
+          temp.push({
+            key: Math.random(1) * 1000,
+            id: i._id,
+            date: i.createdAt,
+            jobName: i.role,
+            companyName: i.companyName,
+            experience: i.experience,
+            salary: i.package,
+            degree: i.degree,
+            location: i.location,
+            role: i.type,
+            description: i.description?.slice(0, 100),
+            link: i.link,
+          });
+          loc.push(i.location);
+          exp.push(i.experience);
+          arr.push(
+            <JobBox
+              key={Math.random(1) * 1000}
+              id={i._id}
+              date={i.createdAt}
+              jobName={i.role}
+              companyName={i.companyName}
+              experience={i.experience}
+              salary={i.package}
+              degree={i.degree}
+              location={i.location}
+              role={i.type}
+              description={i.description?.slice(0, 100)}
+              link={i.link}
+            />
+          );
         });
-        loc.push(i.location);
-        exp.push(i.experience);
-        arr.push(
-          <JobBox
-            key={Math.random(1) * 1000}
-            id={i._id}
-            date={i.createdAt}
-            jobName={i.role}
-            companyName={i.companyName}
-            experience={i.experience}
-            salary={i.package}
-            degree={i.degree}
-            location={i.location}
-            role={i.type}
-            description={i.description?.slice(0, 100)}
-            link={i.link}
-          />
-        );
-      });
-      let nloc = [...new Set(loc)].sort();
-      let nexp = [...new Set(exp)].sort();
-      let nnloc = [],
-        nnexp = [];
-      nloc.forEach((nl) => {
-        nnloc.push({ label: nl, value: nl });
-      });
-      nexp.forEach((nl) => {
-        nnexp.push({ label: nl, value: nl });
-      });
-      setLocation(nnloc);
-      setExperience(nnexp);
-      setJob(arr);
-      setJobArray(temp);
-      setLoading(false);
+        let nloc = [...new Set(loc)].sort();
+        let nexp = [...new Set(exp)].sort();
+        let nnloc = [],
+          nnexp = [];
+        nloc.forEach((nl) => {
+          nnloc.push({ label: nl, value: nl });
+        });
+        nexp.forEach((nl) => {
+          nnexp.push({ label: nl, value: nl });
+        });
+        setLocation(nnloc);
+        setExperience(nnexp);
+        setJob(arr);
+        setJobArray(temp);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching data: ", error);
+      }
     };
     jobs();
   }, []);
+
   return (
     <>
       <Navbar />
@@ -97,7 +104,7 @@ export default function Home() {
               </Link>
             </div>
             <div className={classes.box2}>
-              <h1>View Carrer Pages of 50+ Companies</h1>
+              <h1>View Career Pages of 50+ Companies</h1>
               <Link href="/carrers">
                 <div className={classes.btn3}>View Now</div>
               </Link>
