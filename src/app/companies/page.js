@@ -3,6 +3,7 @@ import JobBox from "@/components/Job/JobBox";
 import React from "react";
 import Lay from "./Lay";
 import Loader from "@/components/Loader/Loader";
+import axios from "axios"
 export default function Home() {
   const [job, setJob] = React.useState();
   const [jobArray, setJobArray] = React.useState();
@@ -12,8 +13,8 @@ export default function Home() {
   const [loading, setLoading] = React.useState(true);
   React.useEffect(() => {
     const jobs = async () => {
-      const a = await fetch("/admin/dashboard/jobs/api");
-      const b = await a.json();
+        const a = await axios.post("/admin/dashboard/jobs/api",{ login: true }, { headers: { 'Cache-Control': 'no-store' } });
+        const b = a.data;
       let arr = [];      
       let temp = [];
       let loc=[]
