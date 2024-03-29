@@ -22,7 +22,7 @@ export default function Home() {
       try {
         const aa = await axios.get("/api");
         const bb = aa.data;
-        const a = await axios.get("/admin/dashboard/jobs/api", { headers: { 'Cache-Control': 'no-store' } });
+        const a = await axios.post("/admin/dashboard/jobs/api",{ login: true }, { headers: { 'Cache-Control': 'no-store' } });
         const b = a.data;
         let arr = [];
         let temp = [];
